@@ -126,7 +126,11 @@ $(document).ready(function(){
 
     {% if has_papers %}
     <td align="center">
+        {% if row['paper'] %}
         <a href="{{row['paper'] | drive}}" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+        {% else %}
+        &nbsp;
+        {% endif %}
     </td>
     {% endif %}
 
@@ -142,15 +146,21 @@ $(document).ready(function(){
     
     {% if has_presentations %}
     <td align="center">
-            {%if row['presentation'] %}
+        {%if row['presentation'] %}
             <a href="{{row['presentation'] | drive}}"><img src="/static/images/large_pdf.gif" /></a>
-        {% else %} &nbsp; {% endif %}        
+        {% else %} 
+        &nbsp; 
+        {% endif %}        
     </td>
     {% endif %}
 
     {% if has_themes %}
     <td>
-     {{row['track'] or row['theme']}}
+        {% if row['track'] or row['theme'] %}
+        {{row['track'] or row['theme']}}
+        {% else %}
+        &nbsp;
+        {% endif %}
     </td>
     {% endif %}
 
