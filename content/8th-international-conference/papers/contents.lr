@@ -1,0 +1,14 @@
+_model: papers_gen
+---
+title: ICRAT 2018 Technical Papers & Presentations
+---
+body:
+---
+content_url_prefix: /ICRAT/seminarContent/2018
+---
+presentation_format: 2018_ICRAT_{}.pdf
+---
+after_table_content:
+
+* Some of the best papers from this conference were included in a special issue of the [CEAS Aeronautical Journal](https://link.springer.com/journal/13272/11/2?wt_mc=alerts.TOCjournals&amp;utm_source=toc&amp;utm
+_medium=email&amp;utm_campaign=toc_13272_11_2).

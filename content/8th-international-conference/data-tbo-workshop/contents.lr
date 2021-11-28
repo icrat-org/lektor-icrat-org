@@ -1,0 +1,141 @@
+_model: page
+---
+title: Data-Enhanced Trajectory Based Operations Workshop
+---
+body:
+
+How will data support the envisioned enhanced ATM capabilities in future TBO environment? What data will be required? How do data need to be managed to become really useful? What are the most promising techniques according to the current and future ATM requirements?
+ 
+These questions are extensively addressed by the projects datACRON (Big Data Analytics for Time Critical Mobility Forecasting) and DART (Data-Driven Aircraft Trajectory Prediction Research), EU H2020 funded research projects that explore the applicability of state-of-the-art applications and most modern data analytics techniques and methodologies into the ATM domain.
+ 
+If you are interested in knowing what leading-edge technologies are being applied to different ATM use cases and the results obtained, please join us in the workshop collocated to the ICRAT conference that will be held in Barcelona on June 25 2018.
+ 
+The main topics discussed during the workshop will include:
+* ATM Data management
+* Data-Driven Trajectory Prediction
+* Agent-Based Modelling of the ATM system
+* Data-driven predictions for flow management
+* Complex Event recognition & forecasting for ATM
+* Visual Analytics for ATM
+ 
+The final agenda of the workshop, including the list of presenters and outlines of the talks, will be included herein in the following weeks. Please check regularly this link to keep aware about any update on this.
+ 
+ **The registration and access to this event is free, although it is requested to confirm your attendance in advance (by an email to David.Scarlatti@boeing.com) for arranging the logistics accordingly to the expected number of attendees.**
+ 
+
+ Keynote Speaker: Goran Stojkovic
+
+Montreal Polytechnic School graduate with Ph.D. in Operations Research (OR). More than thirty years of academic and industry experience in planning, organizing and directing the analysis, design and development of innovative solutions and services. Participating in many OR and Aviation conferences, publishing several articles in leading OR journals and authoring book chapters in prestigious OR books. In Boeing/Jeppesen since 2002 working in different roles at New York, Montreal and Denver offices. Currently based in Denver, part of the Digital Airline and Analytics Global Managed Services team. His current focus is on increasing the Boeing Global Services (BGS) productivity and market share through innovation, integration, and consistent use of analytics and optimization methods and technologies across all BGS product portfolios.
+ 
+### Schedule
+
+
+
+<table border="0" cellpadding="17" width="100%" class="sample">
+<tr>
+ <td>12:30</td>
+ <td><em>Welcome and Lunch</em></td>
+</tr>
+<tr>
+ <td>13:30</td>
+ <td>Introduction to the WS</td>
+</tr>
+<tr>
+ <td>13:45</td>
+ <td>Keynote speaker – Goran Stojkovic (Boeing Digital Airline and Analytics)</td>
+</tr>
+<tr>
+ <td>&nbsp;</td>
+ <td></td>
+</tr>
+<th>
+<tr>
+ <td></td>
+ <td><strong><em>Session 1.- Trajectory Data Management</em></strong></td>
+</tr>
+</th>
+<tr>
+ <td>14:15</td>
+ <td>Trajectory Data storage (CRIDA)</td>
+</tr>
+<tr>
+ <td>14:55</td>
+ <td>Big data integration and management for the ATM domain – (UPRC)</td>
+</tr>
+<tr>
+ <td>15:15</td>
+ <td><em>Coffee-break &amp; networking</em></td>
+</tr>
+<tr>
+ <td>&nbsp;</td>
+ <td></td>
+</tr>
+<th>
+<tr>
+ <td></td>
+ <td><strong><em>Session 2.- Data-Driven Mobility Predictions &amp; Analytics</em></strong></td>
+</tr>
+</th>
+<tr>
+ <td>15:35</td>
+ <td>Hybrid data-driven trajectory prediction analytics (BR&T-E)/td>
+</tr>
+<tr>
+ <td>15:55</td>
+ <td>Data-driven aircraft trajectory prediction (UPRC)</td>
+</tr>
+<tr>
+ <td>16:15</td>
+ <td>Complex Events Recognition (CRIDA)</td>
+</tr>
+<tr>
+ <td>16:35</td>
+ <td>Visual Analytics of Trajectory Data (NSCR/FRHF)</td>
+</tr>
+
+<tr>
+ <td>16:55</td>
+ <td><em>Coffee-break & networking</em></td>
+</tr>
+<tr>
+ <td>&nbsp;</td>
+ <td></td>
+</tr>
+<th>
+<tr>
+ <td></td>
+ <td><strong><em>Session 3.- Applications of Machine Learning to TBO</em></strong></td>
+</tr>
+</th>
+<tr>
+ <td>17:15</td>
+ <td>Trajectory based analytics: A Maritime Situation Awareness Perspective – (NARI/CMRE)</td>
+</tr>
+<tr>
+ <td>17:35</td>
+ <td>Trajectory-centered agent-based modeling of ATM (UPRC)</td>
+</tr>
+<tr>
+ <td>17:55</td>
+ <td>Python Big Data Analytics with Dask (Juan Luis Cano)</td>
+</tr>
+<tr>
+ <td>18:15</td>
+ <td>Workshop conclusions and wrap-up</td>
+</tr>
+</table>
+ 
+<br/>
+ 
+For additional details regarding datACRON or DART project, please visit the respective webpages:
+- http://ai-group.ds.unipi.gr/datacron/
+- http://dart-research.eu/
+
+
+
+<div class="text-center">
+<img src="datAcron.jpg" class="rounded"/><br/>
+<img src="dartresearch.png" width="200" height="200" class="rounded"/>
+</div>
+
+<img src="../2018_boeing_sponsor.png" class="img-responsive"/>

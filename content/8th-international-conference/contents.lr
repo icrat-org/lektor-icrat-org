@@ -1,0 +1,29 @@
+_model: page
+---
+title: 2018 International Conference on Research in Air Transportation
+---
+body:
+
+The International Conference on Research in Air Transportation was held in Barcelona, June 26-29, 2018, and hosted by Universitat Politècnica de Catalunya.
+
+* [ICRAT 2018 Papers and Presentations](./papers/)
+* [ICRAT 2018 Schedule](./ICRAT_2018_Schedule.pdf)
+* [Call For Papers](./call-for-papers/)
+* [Student Grand Challenge](./grand-challenge/)
+* [Data-Enhanced Trajectory Based Operations Workshop](./data-tbo-workshop/)
+* [Conference Committee](./committee-members/)
+
+<address>
+<strong>Universitat Politècnica de Catalunya - Barcelona Tech</strong><br/>
+Esteve Terradas, 7, 08860<br/>
+Castelldefels, Catalonia - Spain<br/>
+</address>
+
+<img src="trees_outside.jpg" class="rounded float-md-right"/>
+<img src="building.jpg" class="rounded float-md-left" />
+
+<div class="text-center">
+<img src="campus.jpg" class="rounded"/>
+<img src="2018_boeing_sponsor.png" class="img-responsive"/>
+</div>
+

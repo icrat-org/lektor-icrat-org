@@ -1,0 +1,8 @@
+[project]
+name = ICRAT
+
+[servers.ghpages]
+target = ghpages://icrat-org/icrat-org.github.io
+
+[packages]
+lektor-conference-template-functions = 0.1.3

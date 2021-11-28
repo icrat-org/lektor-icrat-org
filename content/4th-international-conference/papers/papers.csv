@@ -1,0 +1,65 @@
+,title,authors,paper,best,theme
+0,A Diffusion Approximation to a Single Airport Queue,David Lovell and Kleoniki Vlachou,/icrat/seminarContent/pdf/A Diffusion Approximation to a Single Airport Queue.pdf,,Advanced Modeling
+1,Analyzing and Decomposing Taxi Times and Predicting Taxi out Times,"Yu Zhang, Arjun Chauhan and Xing Chen",/icrat/seminarContent/pdf/Analyzing and Decomposing Taxi Times.pdf,,Advanced Modeling
+2,Applying Economy-wide Modeling to NextGen Benefits Analysis,"Dr. Katherine Harback, Dr. Leonard Wojcik, Jr, Dr. Michael B. Callaham, Dr. Shane Martin, Simon Tsao, and Jon Drexler",/icrat/seminarContent/pdf/Applying Economy-wide Modeling to NextGen Benefits Analysis.pdf,,Advanced Modeling
+3,Data Driven Modeling for the Simulation of Converging Runway Operations,Adric Eckstein,/icrat/seminarContent/pdf/Data Driven Modeling.pdf,,Advanced Modeling
+4,Fair Slot Allocation of Airspace Resources Based on Dual Values for Slots,Nasim Vakili Pourtaklo and Michael Ball,/icrat/seminarContent/pdf/Fair Slot Allocation of Airspace Resources.pdf,,Advanced Modeling
+5,Game Equilibrium Analysis on an Auctioning Method for Airport Congesting Resource Allocation,Liu Fangqin and Hu Minghua,/icrat/seminarContent/pdf/GAME EQUILIBRIUM ANALYSIS.pdf,,Advanced Modeling
+6,Impact of Lightning Strikes on National Airspace System (NAS) Outages,Aurelien Vidal and Jasenka Rakas,/icrat/seminarContent/pdf/Impact of Lightning Strikes.pdf,,Advanced Modeling
+7,Ontology and Rules for International Airspace Security,Renato D.Henriques,/icrat/seminarContent/pdf/Ontology and Rules for International Airspace.pdf,,Advanced Modeling
+8,Optimal Route Decision with Weather Risk Hedging using a Geometric Model,"Yoonjin Yoon, Mark Hansen and Michael O.Ball",/icrat/seminarContent/pdf/Optimal Route Decision.pdf,,Advanced Modeling
+9,Queueing Models for Operations in NextGen,Tasos Nikoleris and Mark Hansen,/icrat/seminarContent/pdf/Queueing Models for Operations in NextGen.pdf,,Advanced Modeling
+10,A TMA 4DT CD/CR causal model based in path shortening/path stretching techniques,"Zuniga C.A., Piera M.A.and Ruiz S",/icrat/seminarContent/pdf/TMA 4DT.pdf,*,Advanced Modeling
+11,Tracking Failures in the Air Traffic System: A model Based on Physical and Functional Decompositions,"Maxime Gariel, Erwan Salaun, and Eric Feron",/icrat/seminarContent/pdf/Tracking Failures in the Air Traffic System.pdf,,Advanced Modeling
+12,Estimating Domestic U.S. Airline Cost of Delay based on European Model,"Abdul Qadar Kara, John Ferguson, Karla Hoffman and Lance Sherry",/icrat/seminarContent/pdf/Estimating Domestic US Airline.pdf,*,Airline Operations and Marketing
+13,The responses of traditional airlines to low cost airlines,Panarat Srisaeng,/icrat/seminarContent/pdf/responses of traditional airlines.pdf,,Airline Operations and Marketing
+14,Airport Ground Access and Egress Passenger Flow    Model (AGAP),"Dr. Milan Stefanik, Dr. Benedikt Badanik and Martin Matas",/icrat/seminarContent/pdf/Airport Ground Access.pdf,,Airport Design and Operations
+15,The airport ground movement problem: past and current research and future directions,"Jason A. D. Atkin, Edmund K. Burke, Stefan Ravizza",/icrat/seminarContent/pdf/airport ground movement.pdf,,Airport Design and Operations
+16,Door-to-Gate Air Passenger Flow Model,"Martin Matas, Milan Stefanik, PhD and Sandra Krollova, PhD",/icrat/seminarContent/pdf/Door-to-Gate Air Passenger.pdf,,Airport Design and Operationsg
+17,Iterative Planning of Airport Ground Movements,Charles Lesire,/icrat/seminarContent/pdf/Iterative Planning.pdf,,Airport Design and Operations
+18,Modeling of Aircraft Surface Traffic Flow at Congested Airport Using Cellular Automata,Ryota Mori,/icrat/seminarContent/pdf/Modeling of Aircraft Surface Traffic.pdf,,Airport Design and Operations
+19,Operational Evaluation of an Airport Centered Flow Management,"Eike Rehwald, Peter Hecker and Rainer Kaufhold",/icrat/seminarContent/pdf/Operational Evaluation.pdf,,Airport Design and Operations
+20,Potential of Dynamic Aircraft to Runway Allocation for Parallel Runways,"Martin Fritzsche, Thomas GÃ¼nther and Hartmut Fricke",/icrat/seminarContent/pdf/Potential of Dynamic Aircraft.pdf,*,Airport Design and Operations
+21,The Air Traffic Flow Management Problem with Time Windows,"Luca Corolli, Lorenzo Castelli and Guglielmo Lulli",/icrat/seminarContent/pdf/Air Traffic Flow Management.pdf,,CNSATM
+22,An Analysis of Delays in Air Transport in Japan,Kota Kageyama and Yutaka Fukuda,/icrat/seminarContent/pdf/Analysis of Delays.pdf,,CNSATM
+23,Study on Conflict Detection Method with Downlink Aircraft Parameters,Atsushi Senoguchi and Yutaka Fukuda,/icrat/seminarContent/pdf/Conflict Detection Method.pdf,,CNSATM
+24,En Route Air Traffic Control Input Devices for the Next Generation,Matthew J. Mainini,/icrat/seminarContent/pdf/En Route Air Traffic Control.pdf,,CNSATM
+25,Enhanced Wind Magnitude and Bearing Prediction,"Petr Krupansky, Tomas Neuzil, Eva Gelnarova, Jiri Svoboda, Petr MejzlÃ­k and Martin Herodes",/icrat/seminarContent/pdf/Enhanced Wind Magnitude.pdf,,CNSATM
+26,Flight Profile Variations due to the Spreading Practice of Cost Index Based Flight Planning,"Wilhelm Rumler, Thomas Gunther, Hartmut Fricke and Urban WeiÃŸhaar",/icrat/seminarContent/pdf/Flight Profile Variations.pdf,*,CNSATM
+27,A new method for generating optimal conflict free 4D trajectory,"Nour Dougui, Daniel Delahaye, Stephane Puechmorel and Marcel Mongeau",/icrat/seminarContent/pdf/optimal conflict free.pdf,,CNSATM
+28,Radar cross section generation of the possible noncooperative targets,Rudolf Palme,/icrat/seminarContent/pdf/Radar cross section generation.pdf,,CNSATM
+29,Resource Allocation in Flow-Constrained Areas with Stochastic Termination Times And Deterministic Movement,"Moein Ganji, David J. Lovell and Michael O. Ball",/icrat/seminarContent/pdf/Resource Allocation in Flow-Constrained Areas.pdf,,CNSATM
+30,Stochastic Integer Programming Models for Ground Delay Programs with Weather Uncertainty,Charles N. Glover and Michael O. Ball,/icrat/seminarContent/pdf/Stochastic Integer Programming.pdf,,CNSATM
+31,"ANALYSIS OF ""TARMAC DELAYS"" AT PHILADELPHIA AIRPORT",Maricel Medina and Lance Sherry,/icrat/seminarContent/pdf/TARMAC DELAYS.pdf,,CNSATM
+32,Trajectory Prediction by Functional Regression in Sobolev Space,"K. Tastambekov, S. Puechmorel, D. Delahaye, C. Rabut",/icrat/seminarContent/pdf/Trajectory Prediction.pdf,,CNSATM
+33,An advanced particle filtering algorithm for improving conflict detection in Air Traffic Control,"Ioannis Lymperopoulos, Georgios Chaloulos and John Lygeros",/icrat/seminarContent/pdf/advanced particle filtering algorithm.pdf,*,Decision Support Tools
+34,A Stochastic Model for Air Traffic Control Radio Channel Utilization,"Vlad Popescu, Henri Augris and Karen Feigh",/icrat/seminarContent/pdf/Stochastic Model.pdf,,Decision Support Tools
+35,Estimation   and Comparison of the Impact of Single Airport Delay to the National   Airspace System using Multivariate Simultaneous Models,"Yu Zhang, Nagesh Nayak and Tony Diana",/icrat/seminarContent/pdf/Estimation and Comparison.pdf,,Decision Support Tools
+36,Impact of US Airline Network Topology on Air Transportation Efficiency,"Tatsuya Kotegawa, Donald Fry, Ethan Puchaty, Daniel DeLaurentis",/icrat/seminarContent/pdf/Impact of US Airline Network.pdf,,Decision Support Tools
+37,Throughput/Complexity Tradeoffs for Routing Traffic in the Presence of Dynamic Weather,"Jimmy Krozel, Joseph S.B. Mitchell, Anne Paakko and Valentin Polishchuk",/icrat/seminarContent/pdf/ThroughputComplexity Tradeoffs.pdf,,Environmental and Weather
+38,Contribution of European Aviation on the Air Quality of the Mediterranean Region: A modeling study,"J. Kushta, S. Solomos and G. Kallos",/icrat/seminarContent/pdf/Contribution of European Aviation.pdf,,Environmental and Weather
+39,Generating Day-of-Operation Probabilistic Capacity Profiles from Weather Forecasts,Mark Hansen and Gurkaran Singh Buxi,/icrat/seminarContent/pdf/Generating Day-of-Operation.pdf,*,Environmental and Weather
+40,High-fidelity human-in-the-loop simulations as one step towards remote control of regional airports,"C. Mohlenbrink, M. Friedrich, A. Papenfub, M. Rudolph, M. Schmidt, F. Morlang and N. Furstenau",/icrat/seminarContent/pdf/human-in-the-loop.pdf,,Future Concepts and Innovative Ideas
+41,Investigating String Stability of a Time-History Control Law for Airborne Spacing,Lesley A. Weitz,/icrat/seminarContent/pdf/Investigating String Stability.pdf,,Future Concepts and Innovative Ideas
+42,Collaborative Rerouting in the Airspace Flow Program,Amy M. Kim and Mark Hansen,/icrat/seminarContent/pdf/Collaborative Rerouting.pdf,,Future Concepts and Innovative Ideas
+43,Dynamic Allocation and Benefit Assessment of NextGen Flow Corridors,"Arash Yousefi, Ali N. Zadeh and Ali Tafazzoli",/icrat/seminarContent/pdf/Dynamic Allocation.pdf,*,Future Concepts and Innovative Ideas
+44,Coordinating multiple traffic management initiatives with integer optimization,"Andrew M. Churchill, David J. Lovell and Michael O. Ball",/icrat/seminarContent/pdf/Coordinating multiple traffic.pdf,,Future Concepts and Innovative Ideas
+45,An optimisation framework for aircraft operators dealing with capacity-demand imbalances in SESAR,LuÄ±s Delgado and Xavier Prats,/icrat/seminarContent/pdf/optimisation framework.pdf,,Future Concepts and Innovative Ideas
+46,Spatial and Temporal Analysis of Enroute Traffic in NAS,Vivek Kumar and Lance Sherry,/icrat/seminarContent/pdf/Spatial and Temporal Analysis.pdf,,Future Concepts and Innovative Ideas
+47,Estimation of Potential Conflict Rates as a function of Sector Loading,Akshay Belle,//icrat/seminarContent/2012/Author/AkshayBelle2/FINAL-378-cfp-Belle.pdf,,Future Concepts and Innovative Ideas
+48,"Economic issues provokes hazardous landing decision-making by enhancing the activity of ""emotional"" neural pathways","Mickael Causse, Frederic Dehais, Patrice Peran, Umberto Sabatini and Josette Pastor",/icrat/seminarContent/pdf/Economic issues.pdf,*,Human Factors
+49,Empirical Analysis of Air Traffic Controller Dynamics,"Yanjun Wang, Minghua Hu and Vu Duong",/icrat/seminarContent/pdf/Empirical Analysis.pdf,,Human Factors
+50,Flight experience and executive functions predict flight simulator performance in general aviation pilots,"MickaÃ«l Causse, Frederic Dehais and Josette Pastor",/icrat/seminarContent/pdf/Flight experience.pdf,,Human Factors
+51,An   automatic generation of metro-like maps to display Flight Routes for   Air Traffic Controllers: structure and color optimization,"Christophe Hurter, Mathieu Serrurie and Roland Alonso",/icrat/seminarContent/pdf/metro-like maps.pdf,,Human Factors
+52,A participatory design for the visualization of airspace configuration forecasts,"Nicolas Saporito, Christophe Hurter, David Gianazz, Geraldine Beboux",/icrat/seminarContent/pdf/participatory design.pdf,,Human Factors
+53,Predicting Controller Communication Time for Capacity Estimation,"Adan Vela, Erwan Salaun, Pierrick Burgain, John-Paul Clarke, Karen Feigh, Eric Feron, William Singhose and Senay Solak",/icrat/seminarContent/pdf/Predicting Controller Communication.pdf,,Human Factors
+54,What kind of aviation infrastructure privatization is needed in China?,Wei Lu and Matthias Finger,/icrat/seminarContent/pdf/aviation infrastructure.pdf,,Prospective Studies and Economics
+55,Capturing the Impact of Fuel Price on Jet Aircraft Operating Costs with Engineering and Econometric Models,Megan Smirti Ryerson and Mark Hansen,/icrat/seminarContent/pdf/Impact of Fuel Price.pdf,*,Prospective Studies and Economics
+56,En route charges for ANSP revenue maximization,"Alessia Violin, Martine Labbe and Lorenzo Castelli",/icrat/seminarContent/pdf/En route charges.pdf,,Prospective Studies and Economics
+57,"Bayesian Analysis of Accident Rate, Trend and Uncertainty in Commercial Aviation",Edwin A. Bloem and Henk A.P. Blom,/icrat/seminarContent/pdf/Bayesian Analysis.pdf,,Safety and Security
+58,Stochastically and Dynamically Coloured Petri Net Model of ACAS Operations,"Fedja Netjasov, Andrija Vidosavljevic, Vojin Tosic, Mariken Everdij and Henk Blom",/icrat/seminarContent/pdf/Stochastically.pdf,,Safety and Security
+59,A quantitative Safety Assessment Tool based on Aircraft Actual Navigation Performance,"Markus Vogel, Christoph Thiel and Hartmut Fricke",/icrat/seminarContent/pdf/Safety Assessment.pdf,,Safety and Security
+60,Study of safety validation needs and approaches implied by SESAR,"Jelmer J. Scholte, Henk A.P. Blom and Alberto Pasquini",/icrat/seminarContent/pdf/safety validation.pdf,*,Safety and Security
+61,Collision risk on final approach - a radar data based evaluation method to assess safety,Christoph Thiel and Hartmut Fricke,/icrat/seminarContent/pdf/Collision risk.pdf,,Safety and Security
+62,Comparison of Arrival Tracks at Different Airports,Yimin Zhang and John Shortle,/icrat/seminarContent/pdf/Arrival Tracks.pdf,,Safety and Security
+63,Stochastic validation of ATM procedures by abstraction algorithms,"Maria D. Di Benedetto, G. Di Matteo and A. D'Innocenzo",/icrat/seminarContent/pdf/ATM procedures.pdf,,Safety and Security

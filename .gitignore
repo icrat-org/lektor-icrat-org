@@ -1,0 +1,4 @@
+seminarContent/
+build/
+*.pyc
+*.swp

@@ -1,0 +1,64 @@
+,title,authors,paper
+0,Passenger trip delays in the U.S. Airline Transportation System in 2007,"Guillermo Calderon-Meza, Lance Sherry,George Donohue",/icrat/seminarContent/2008/PASSENGER_TRIP_DELAYS.pdf
+1,Constructing a Passenger Trip Delay Metric,"Shin-Lai Tien, Michael Ball",/icrat/seminarContent/2008/Constructing_a_Passenger_Trip_Delay_Metric.pdf
+2,Filtering and Aggregation Schemes for Delay Model  Calibration,"Andrew M. Churchill, Kleoniki Vlachou and David J. Lovell",/icrat/seminarContent/2008/Filtering_Aggregation_Schemes.pdf
+3,Impact of Ground Delay Program (GDP)  Rationing Rules on Passenger and Airline Equity,Bengi Manley and Lance Sherry,/icrat/seminarContent/2008/Impact_of_Ground_Delay_Program.pdf
+4,Passenger Flow Simulation In A Complex Networked  Transportation System,"Danyi Wang, Lance Sherry, George Donohue and Bert Hackney",/icrat/seminarContent/2008/Passenger_Flow_Simulation.pdf
+5,Modeling Stochastic Evolution of Runway Capacity  using Data Mining Concepts,Yoonjin Yoon and Mark Hansen,/icrat/seminarContent/2008/Modeling_Stochastic_Evolution.pdf
+6,Deconstructing Delay:  A Case Study of Demand and Throughput at the New York Airports,Amy Kim and Mark Hansen,/icrat/seminarContent/2008/Case_Study_of_Demand_and_Throughput.pdf
+7,Propagation of Airspace Congestion:  An Exploratory Correlation Analysis,"Claus Gwiggner, Kota Kageyama and Sakae Nagaoka",/icrat/seminarContent/2008/Propagation_of_Airspace_Congestion.pdf
+8,Smoothed traffic complexity metrics for  airspace configuration schedules,David Gianazza,/icrat/seminarContent/2008/Smoothed_traffic_complexity_metrics.pdf
+9,Network Restructuring Models for Improved ATS  Forecasts,"Daniel A. DeLaurentis, Tatsuya Kotegawa and Aaron Sengstacken",/icrat/seminarContent/2008/Network_Restructuring_Models.pdf
+10,Resource Allocation in Flow-Constrained Areas with  Stochastic Termination Times,"Andrew M. Churchill, Kleoniki Vlachou and David J. Lovell",/icrat/seminarContent/2008/Resource_Allocation_in_Flow-Constrained_Areas.pdf
+11,Trajectory Prediction : a Functional Regression  Approach,"S. Puechmorel, D. Delahaye and L. Boussouf",/icrat/seminarContent/2008/Trajectory_Prediction.pdf
+12,The robust flight level assignment problem,Olivier Klopfenstein and Dritan Nace,/icrat/seminarContent/2008/robust_flight_level_assignment.pdf
+13,Stochastic Airspace Demand for Strategic Traffic  Flow Management,Jeff Henderson and Antonio Trani,/icrat/seminarContent/2008/Stochastic_Airspace_Demand.pdf
+14,Modeling the Operational Impact of  Air Traffic Control Automation  Tools,"Megan Smirti, Mark Hansen and Xing Chen",/icrat/seminarContent/2008/MODELING_OPERATIONAL_IMPACT.pdf
+15,Filtering and Aggregation Schemes for Delay Model  Calibration,"Andrew M. Churchill, Kleoniki Vlachou and David J. Lovell",/icrat/seminarContent/2008/Filtering_Aggregation_Schemes.pdf
+16,Limitations of Subliminal Control in Air Traffic  Management,Georgios Chaloulos and John Lygeros,/icrat/seminarContent/2008/Limitations_of_Subliminal_Control.pdf
+17,Distribution of Longitudinal Speed Prediction Error  of ADS-C System,Masato Fujita,/icrat/seminarContent/2008/Distribution_of_Longitudinal_Speed.pdf
+18,Three-Degree Decelerating  Approaches in Arrival Streams,"Arjen de Leege, Max Mulder, Alexander in't Veld and Rene van Paassen",/icrat/seminarContent/2008/Three-Degree_Decelerating_Approaches.pdf
+19,Separation Minima Standards:  Research of Current Applicable Minima Laid Down and Foundations,Daniel Mosquera Benitez and Gustavo Cuevas Angulo,/icrat/seminarContent/2008/Separation_Minima_Standards.pdf
+20,A Review of the Research on Risk and Safety  Modelling in Civil Aviation,Fedja Netjasov and Milan Janic,/icrat/seminarContent/2008/Review_of_the_Research.pdf
+21,Accident Risk Analysis Benchmarking  Monte Carlo Simulation versus Event Sequences,"Henk A.P. Blom, Sybert H. Stroeve, Jelmer J. Scholte and Hans H. de Jong",/icrat/seminarContent/2008/Accident_Risk_Analysis.pdf
+22,Analyzing Relationships Between Aircraft Accidents  and Incidents,"Zohreh Nazer, George Donohue and Lance Sherry",/icrat/seminarContent/2008/Analyzing_Relationships_Between_Aircraft_Accidents.pdf
+23,ATC Complexity as Workload and Safety Driver,"Jelena Djokic, Bernd Lorenz and Hartmut Fricke",/icrat/seminarContent/2008/ATC_Complexity.pdf
+24,Assessment of local aircraft crash risk,Christoph Thiel and Hartmut Fricke,/icrat/seminarContent/2008/local_aircraft_crash_risk.pdf
+25,Hybrid System Framework for the Safety Modelling  of the In Trail Procedure,Marco Colageo and Antonio Di Francesco,/icrat/seminarContent/2008/Hybrid_System_Framework.pdf
+26,"Proactive, Reactive, and Interactive Risk Assessment  and Management of URET Implementation in Air  Route Traffic Control Centers","Grace Uang, Jasenka Rakas and Tatjana Bolic",/icrat/seminarContent/2008/Proactive_Reactive_and_Interactive_Risk_Assessment.pdf
+27,"Decision Support Tool for Predicting Aircraft  Arrival Rates, Ground Delay Programs, and Airport  Delays from Weather Forecasts",David A. Smith and Lance Sherry,/icrat/seminarContent/2008/Decision_Support_Tool.pdf
+28,Pilot Support for Flying Curved Decelerating  Approaches in Realistic Wind Conditions,"Alexander in t Veld, Rob Groenouwe, Max Mulder and Rene van Paassen",/icrat/seminarContent/2008/Pilot_Support_for_Flying.pdf
+29,Developing a decision-support-tool for  an air taxi service,Peter A. Sengers and Stefaan S.A.Ghijs,/icrat/seminarContent/2008/Developing_a_decision-support-tool.pdf
+30,Route Preliminary Demand Forecast Model,Nicolaas H. Elferink and Stefaan S. Ghijs,/icrat/seminarContent/2008/Route_Preliminary_Demand.pdf
+31,An Infovis approach to compare ATC comets,"Christophe Hurter, Vincent Kapp and Stephane Conversy",/icrat/seminarContent/2008/An_Infovis_approach.pdf
+32,Functional Analysis of Human-Human  Interactions during Collaborative Decision  Making in Flight Operation,"Matthias Groppe, Marc Bui and Romano Pagliari",/icrat/seminarContent/2008/Functional_Analysis_of_Human-Human.pdf
+33,Responding to Uncertainty on Approach in  Hazardous Situations,"Ronish T. Joyekurun, William Wong and      Paola Amaldi",/icrat/seminarContent/2008/Responding_to_Uncertainty.pdf
+34,Automation for Task Aanlysis of Next  Generation Air Traffic Management  Systems,"Maricel Medina, Lance Sherry and Michael Feary",/icrat/seminarContent/2008/AUTOMATION_FOR_TASK_ANALYSIS.pdf
+35,Human-Centred Innovation:  Developing 3D-in-2D Displays for ATC,"B.L. William Wong, Simone Rozzi, Stephen Gaukrodger, Alessandro Boccalatte, Paola Amaldi, Bob Fields, Martin Loomes and Peter Martin",/icrat/seminarContent/2008/Human-Centred_Innovation.pdf
+36,Embedded eye tracker in a real aircraft: new  perspectives on pilot/aircraft interaction monitoring,"Frederic Dehais, Mickael Causse and Josette Pastor",/icrat/seminarContent/2008/Embedded_eye_tracker.pdf
+37,Visual Cognition Abilities in X-Ray Screening,Diana Hardmeier and Adrian Schwaninger,/icrat/seminarContent/2008/Visual_Cognition_Abilities.pdf
+38,The Impact of Image Based Factors and Training on  Threat Detection Performance in X-ray Screening,"Adrian Schwaninger, Anton Bolfing, Tobias Halbherr, Shaun Helman, Andrew Belyavin and Lawrence Hay",/icrat/seminarContent/2008/The_Impact_of_Image.pdf
+39,Comparison of Data Envelopment Analysis Methods  Used in Airport Benchmarking,David Schaar and Lance Sherry,/icrat/seminarContent/2008/Comparison_of_Data_Envelopment.pdf
+40,Improving Aircraft Turn Around Reliability,Hartmut Fricke and Michael Schultz,/icrat/seminarContent/2008/Improving_Aircraft_Turn_Around_Reliability.pdf
+41,Runways sequences and ground traffic optimisation,"Raphael Deau, Jean-Baptiste Gotteland and Nicolas Durand",/icrat/seminarContent/2008/Runways_sequences.pdf
+42,Accuracy of Reinforcement Learning Algorithms for  Predicting Aircraft Taxi-out Times,"Poornima Balakrishna, Rajesh Ganesan and Lance Sherry",/icrat/seminarContent/2008/Accuracy_of_Reinforcement.pdf
+43,"Research of the relation between the sustainability of  hourly capacity at Schiphol airport, KLM arrival  punctuality and the percentage of KLM transfer  passengers at risk of loosing their connection",Dragana Mijatovic and Marleen Meert,/icrat/seminarContent/2008/Research_of_the_relation.pdf
+44,A Preliminary Evaluation of Potential Cargo Demand  for Very Light Jets,Yue Xu and Antonio A. Trani,/icrat/seminarContent/2008/Preliminary_Evaluation.pdf
+45,Untapped potential of on-board advertising,"Benedikt Badanik, Hitham Fakih, and Milan Stefanik",/icrat/seminarContent/2008/on-board_advertising.pdf
+46,Pricing schemes based on air navigation service  charges to reduce en-route ATFM delays,Andrea Ranieri and Lorenzo Castelli,/icrat/seminarContent/2008/Pricing_schemes.pdf
+47,Estimation of Aviation Infrastructure Condition from  a Biased Sample,"Gautam Gupta, Jasenka Rakas and Mark Hansen",/icrat/seminarContent/2008/Estimation_of_Aviation_Infrastructure.pdf
+48,On the Use of Near Field Computational Fluid  Dynamics for Improving Airport Related Dispersion  Models,Syoginus S. Aloysius and Luiz C. Wrobel,/icrat/seminarContent/2008/Near_Field_Computational_Fluid_Dynamics.pdf
+49,Optimal departure aircraft trajectories minimising  population annoyance,"Xavier Prats, Vicenc Puig, Joseba Quevedo and Fatiha Nejjari",/icrat/seminarContent/2008/Optimal_departure_aircraft_trajectories.pdf
+50,An Artificial Intelligence Approach to Operational  Aviation Turbulence Forecasting,"Jennifer Abernethy, Robert Sharman and Elizabeth Bradley",/icrat/seminarContent/2008/Artificial_Intelligence_Approach.pdf
+51,An Environmental Airport ATM Modelling Support  Tool and its use in Stacking and CDA Scenarios,Alexander Goman and David Atkins,/icrat/seminarContent/2008/Environmental_Airport_ATM.pdf
+52,"Analysis of Emissions Inventory for  ""Single-Engine Taxi-Out"" operations","Vivek Kumar, Lance Sherry and Terrence Thompson",/icrat/seminarContent/2008/ANALYSIS_OF_EMISSIONS_INVENTORY.pdf
+53,On the Use of Visualization Tools to Present  Complex Simulated Environmental Data for Policy  Making,"Daniel Pearce, Luiz Wrobel, Ian Fulle",/icrat/seminarContent/2008/Use_of_Visualization_Tools.pdf
+54,"Peak oil, fuel costs and the future of aviation",Richard Klophaus,/icrat/seminarContent/2008/Peak_oil_fuel_costs.pdf
+55,Analysis of Air Transportation for the New York  Metroplex: Summer 2007,"Liya Wang, George Donohue, Karla Hoffman, Lance Sherry and Rosa Oseguera-Lohr",/icrat/seminarContent/2008/Analysis_of_Air_Transportation.pdf
+56,Demand for Low-Cost Airlines in Australia,"Panarat Srisaeng, Cees Bil, Margaret Tein",/icrat/seminarContent/2008/Demand_for_Low-Cost_Airlines_in_Australia.pdf
+57,Information Design for Collaboration in Distributed  Team Work,"Simone Rozzi, Paola Amaldi and Bob Fields",/icrat/seminarContent/2008/Information_Design.pdf
+58,Optimising the Predictability and Flexibility of  Dynamic System: Case of 4D Aircraft Trajectory of  Air Traffic Management,Trung-Tuyen Hoang,/icrat/seminarContent/2008/Optimising_the_Predictability.pdf
+59,The Integrator Market,Evy Onghena,/icrat/seminarContent/2008/The_Integrator_Market.pdf
+60,A Construction Rationale to Tailor Crew Resource  Management Training to Target Audiences,"Vera Hagemann, Sandrina Ritzmann and Annette Kluge",/icrat/seminarContent/2008/A_Construction_Rationale.pdf
+61,Technology Assessment and Prioritization for Small  and Medium Airports: A Methodological Approach,"Olivia J. Pinon, Dimitri Mavris and Elena Garcia",/icrat/seminarContent/2008/Technology_Assessment.pdf
+62,Evaluating aeronautical regulations using rigorous  specifications,Eduardo Rafael Lopez Ruiz,/icrat/seminarContent/2008/Evaluating_aeronautical_regulations.pdf
