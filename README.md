@@ -1,4 +1,4 @@
-# ATM Seminar Lektor Source Code
+# ICRAT Lektor Source Code
 
 This is the Lektor source code for the website https://www.icrat.org.  This project is written in the [Lektor Content Management System - Static Site Generator](https://www.getlektor.com).
 
@@ -10,7 +10,7 @@ Each individual yearly conference page has a subdirectory `papers` which holds a
 
 Individual templates are located in the [templates folder](./templates/)
 
-## ATM Seminar Conference Site
+## ICRAT Conference Site
 
 This site re-uses plugin code that is shared with [the ATM Seminar Lektor source code](https://github.com/atmseminar-org/lektor-atmseminar-org/).  The templates and content structure are also very similar.
 
@@ -32,7 +32,7 @@ You can now use `lektor server` to host a [local version of the site](http://loc
 
 ## Updates and Deployment
 
-Site updates can come either as pull requests to this repository, or if you have push permissions to the [Github Pages repository](https://github.com/atmseminar-org/atmseminar-org.github.io) then you can execute the lektor command
+Site updates can come either as pull requests to this repository, or if you have push permissions to the [Github Pages repository](https://github.com/icrat-org/icrat-org.github.io) then you can execute the lektor command
 
 `lektor deploy ghpages --key-file [YOUR_PUBLIC_SSH_KEY_FILE]`
 

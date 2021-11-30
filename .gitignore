@@ -2,3 +2,4 @@ seminarContent/
 build/
 *.pyc
 *.swp
+.~lock*
