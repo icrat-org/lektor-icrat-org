@@ -1,6 +1,6 @@
 # ICRAT Lektor Source Code
 
-This is the Lektor source code for the website https://www.icrat.org.  This project is written in the [Lektor Content Management System - Static Site Generator](https://www.getlektor.com).
+This is the Lektor source code for the website https://www.icrat.org (which should resolve to https://icrat-org.github.io by December 10, 2021).  This project is written in the [Lektor Content Management System - Static Site Generator](https://www.getlektor.com).
 
 ## Content
 
