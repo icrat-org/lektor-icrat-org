@@ -1,5 +1,8 @@
 image: python:3.6
 
+# See github at https://www.github.com/icrat-org/lektor-icrat-org
+# See gitlab at https://www.gitlab.com/icrat-org/icrat-public-site
+
 pages:
   script:
   - pip install lektor
