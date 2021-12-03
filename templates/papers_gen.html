@@ -120,14 +120,14 @@ $(document).ready(function(){
 
     {% if has_abstracts_file %}
     <td align="center">
-        <a href="{{row['abstracts_file'] | drive}}" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+        <a href="{{row['abstracts_file'] | drive}}" target="_blank"><img alt="pdf logo image" src="{{'/static/images/large_pdf.gif'|url}}" /></a>
     </td>
     {% endif %}
 
     {% if has_papers %}
     <td align="center">
         {% if row['paper'] %}
-        <a href="{{row['paper'] | drive}}" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+        <a href="{{row['paper'] | drive}}" target="_blank"><img alt="pdf logo image" src="{{'/static/images/large_pdf.gif'|url}} /></a>
         {% else %}
         &nbsp;
         {% endif %}
@@ -147,7 +147,7 @@ $(document).ready(function(){
     {% if has_presentations %}
     <td align="center">
         {%if row['presentation'] %}
-            <a href="{{row['presentation'] | drive}}"><img src="/static/images/large_pdf.gif" /></a>
+        <a href="{{row['presentation'] | drive}}"><img src="{{'/static/images/large_pdf.gif'|url}}" /></a>
         {% else %} 
         &nbsp; 
         {% endif %}        
