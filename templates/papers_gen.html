@@ -127,7 +127,7 @@ $(document).ready(function(){
     {% if has_papers %}
     <td align="center">
         {% if row['paper'] %}
-        <a href="{{row['paper'] | drive}}" target="_blank"><img alt="pdf logo image" src="{{'/static/images/large_pdf.gif'|url}} /></a>
+        <a href="{{row['paper'] | drive}}" target="_blank"><img alt="pdf logo image" src="{{'/static/images/large_pdf.gif'|url}}" /></a>
         {% else %}
         &nbsp;
         {% endif %}
