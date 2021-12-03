@@ -1,72 +1,65 @@
 _model: page
 ---
-title: Call for Papers: ICRAT 2020
+title: Call for Papers: ICRAT 2022
 ---
 body:
 
-<!-- in case they change there mind <p>
-    <a class="btn btn-default btn-lg" href="ICRAT_2020_Call_for_Papers.pdf"><u>PDF</u></a>
-    <a class="btn btn-default btn-lg" href="ICRAT2020_regular_paper_template.doc"><u>Regular Paper Template</u></a>
-    <a class="btn btn-default btn-lg" href="ICRAT2020_doctoral_symposium_template.doc"><u>Doctoral Paper Template</u></a>
-</p>-->
+Following the success of its nine previous editions, the United States Federal Aviation Administration
+and EUROCONTROL are jointly organizing the 10 th edition of the International Conference on
+Research in Air Transportation (ICRAT), which is to be held June 19-23, 2022, at the University of
+South Florida in Tampa, Florida, USA. It is the hope of the ICRAT planning committee that the
+conference can be held with full in-person participation. The pandemic situation might require a
+transition to a hybrid or virtual model; the latest information will be available on the ICRAT 2022 web
+site.
 
-Following the success of its eight previous editions, the United States Federal Aviation Administration and EUROCONTROL are jointly organizing the 9th edition of the International Conference on Research in Air Transportation (ICRAT), which is to be held <b>June 23-26, 2020 at the University of South Florida</b> in Tampa, Florida, USA. 
-
-ICRAT is an established path-finding event in Air Transportation Research, alternating timely with the USA/Europe Air Traffic Management (ATM) Research and Development (R&D) Seminar. ICRAT is a forum particularly encouraging young researchers (and their mentors) within air transportation to share their work, expand their professional network, practice scientific dissemination, gain new inspiration, and discover the new challenges confronting society and the market to improve mobility in a time of critical ecological debates especially on the air transport system for citizens and goods. 
+ICRAT is an established event in Air Transportation Research with a global outreach, alternating
+yearly with the USA/Europe Air Traffic Management (ATM) Research and Development (R&D)
+Seminar. ICRAT is a forum particularly encouraging young researchers (and their mentors) within air
+transportation to share their work, expand their professional network, practice scientific
+dissemination, gain new inspiration, and discover the new challenges confronting society and the
+market to adopt mobility in a time of critical ecological debate.
 
 Submissions by researchers are solicited on a wide range of topics describing theoretical results and innovative applications in air transportation including but not limited to the following conference topics:
+
 * Advanced modeling and design methodologies, including network, human-machine interaction and trajectory operations models
-
 * Airline operations and quality of service
-
-* Airport design, management and operations
-
+* Airport/ Heliport design, management and operations
 * Air transportation governance, economics and policy
-
 * Air transportation system performance measurement and management
-
-* Automation strategies and application of successful automation techniques from other domains to air transportation
-
+* Automation strategies and their application 
 * Decision support systems and human-machine collaboration
-
 * Environment and energy efficiency, climate change and impact
-
 * Information management, enhanced communication, surveillance and navigation
-
 * Integration of high altitude and commercial space activities into air traffic management
-
 * Network management, traffic flow optimization, system resilience and crisis management
-
 * Drones and highly automated air vehicle integration
-
-* Safety, human performance and security
-
+* Safety, human performance and security 
 * Socio-technical complexity and applications of data science in aviation
-
 * Trajectory optimization, trajectory and separation management 
+* Standards development and regulation.
 
 Papers should clearly state the objectives, approach, methodology and results of the research, and should draw conclusions that demonstrate the interest of the work. 
 
 
 ### Technical Papers submission instructions
 
-Authors are invited to submit (online) their full papers (maximum 8 pages), written in English, presenting the results of research, or of innovative practical applications relevant to the conference topics. 
+Authors are invited to submit (online) their full papers (with a strict maximum of 8 pages), written in English, presenting the results of research, or of innovative practical applications relevant to the conference topics.  
 
-The technical paper template is available [here](http://www.icrat.org/icrat/upcoming-conference/call-for-papers/ICRAT2020_regular_paper_template.doc). Papers must be submitted by Sunday February 16, 2020. If your paper is approved by the Program Committee, you will receive the notification of acceptance by early April 2020.
+The technical paper template is available [here](./ICRAT2022_regular_paper_template.doc). Papers must be submitted by Sunday February 13, 2022. If your paper is approved by the Program Committee, you will receive the notification of acceptance by early April 2022.
 
-Authors must register and log in to the conference paper submission page at https://easychair.org/conferences/?conf=icrat2020 in order to submit their paper.
+Authors must register and log in to the conference paper submission page at https://easychair.org/conferences/?conf=icrat2022 in order to submit their paper.
 
-All papers will be cross reviewed by the conference program committee for their originality, relevance and clarity. Accepted papers will be published in the conference proceedings. Winners of the best paper awards are eligible for submission to a special issue of an archival journal.
+All papers will be peer reviewed by the conference program committee for their originality, relevance and clarity. Accepted papers will be published in the conference proceedings. Winners of the best paper awards are eligible for submission to a special issue of an archival journal.
 
 ### Doctoral Symposium for Early Stage Research
 
-In addition, ICRAT 2020 will conduct a Doctoral Symposium for students in early stages of their research, providing a supportive yet questioning setting in which graduate students can present their work. It is an opportunity for students preparing a Ph.D. thesis in topics listed above to receive constructive feedback from experienced members of the research community. It is acceptable to present research that is only in a proposal stage, to take full advantage of the guidance from the conference attendees.
+In addition, ICRAT 2022 will conduct a Doctoral Symposium for students in early stages of their research, providing a supportive yet questioning setting in which graduate students can present their work. This is an opportunity for students preparing a Ph.D. thesis in topics listed above to receive constructive feedback from experienced members of the research community. It is acceptable to present research that is only in a proposal stage, to take full advantage of the guidance from the conference attendees. 
 
-Ph.D. students interested in the ICRAT 2020 Doctoral Symposium are invited to submit (online) their doctorial papers (up to 4 pages) written in English, presenting the research, approach and early results. 
+Ph.D. students interested in the ICRAT 2022 Doctoral Symposium are invited to submit (online) their doctorial papers (up to 4 pages), presenting the research, approach and early results.  
 
-The Doctorial Symposium template is available [here](http://www.icrat.org/icrat/upcoming-conference/call-for-papers/ICRAT2020_doctoral_symposium_template.doc). Papers must be submitted by Sunday February 16, 2020.
+The Doctorial Symposium template is available [here](./ICRAT2020_doctoral_symposium_template.doc). Papers must be submitted by Sunday February 13, 2022.
 
-Authors must register and log in to the conference paper submission page at https://easychair.org/conferences/?conf=icrat2020 in order to submit their paper.
+Authors must register and log in to the conference paper submission page at https://easychair.org/conferences/?conf=icrat2022 in order to submit their paper.
 
 ### Financial Support
 
@@ -74,4 +67,4 @@ Financial support for participating in this conference is available from the FAA
 
 ### Conference Website
 
-The Conference website, http://www.icrat.org/, contains information about past ICRAT conferences and will be updated with information regarding ICRAT 2020, including final submission instructions, important dates, and instructions for financial support applications. 
+The Conference website, http://www.icrat.org/, contains information about past ICRAT conferences and will be updated with information regarding ICRAT 2022, including final submission instructions, important dates, and instructions for financial support applications. 

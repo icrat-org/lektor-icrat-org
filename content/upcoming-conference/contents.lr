@@ -1,26 +1,18 @@
-_model: page
+title: The 10th International Conference
 ---
-title: 9th International Conference for Research in Air Transportation
----
-body:
+body: 
 
+<div style="max-width:75%" class="center-block">
+<img src="./USF-COE.jpg" class="img-responsive"/>
+</div>
 
-<!--a class="btn btn-default btn-lg" href="https://reg.planetReg.com/ICRAT%202020%20Virtual%20Conference">Complete the 2020 ICRAT Virtual Conference Registration! &raquo;</a-->
-<!--a class="btn btn-default btn-lg" href="./upcoming-conference/papers/">2020 ICRAT Abstracts and Doctoral Videos Available! &raquo;</a-->
+<br/>
 
-The 9th International Conference for Research in Air Transportation (ICRAT) was held in a virtual format, in a combination of synchronous and asynchronous modes. The synchronous session was held on Tuesday, September 15, 2020, from 9:00 am to 1:00 pm EDT, as a webcast and featured plenary speakers and presentations from the authors of some of the papers that won Best Paper awards.
+Following the success of its nine previous editions, the United States Federal Aviation Administration and EUROCONTROL are jointly organizing the 10th edition of the International Conference on Research in Air Transportation (ICRAT), which is to be held June 19-23, 2022, at the University of South Florida in Tampa, Florida, USA. It is the hope of the ICRAT planning committee that the conference can be held with full in-person participation. The pandemic situation might require a transition to a hybrid or virtual model; the latest information will be available on the ICRAT 2022 web site.
 
-The asynchronous part of the conference consisted of two main pieces: the Doctoral Symposium and the paper/video archive. In lieu of live presentations, the ICRAT Doctoral Symposium is a library of video presentations by the paper authors. These presentations are available on [2020 ICRAT Presentations and Technical Papers](./papers/).
+* [Committee Members](./committee-members/)
+* [Call for Papers](./call-for-papers/)
+* [Call for Papers (PDF)](./call-for-papers/ICRAT2022_Call_for_Papers.pdf)
+* [Regular Paper Template (docx)](./call-for-papers/ICRAT2022_regular_paper_template.docx)
+* [Doctor Symposium Template (docx)](./call-for-papers/ICRAT2022_doctoral_symposium_template.docx)
 
-The above link also contains abstracts for all of the conference papers, the technical papers (except for those who have opted out because they are seeking publication in an archival journal), and videos for the five technical papers that were presented in the synchronous part of the conference.
-
-Additional conference information is provided at the links below:
-
-* [Conference Committee](./committee-members/)
-* [2020 ICRAT Agenda](./agenda/)
-* [2020 ICRAT Book of Abstracts](./papers/Abstracts_ICRAT2020.pdf)
-* [2020 ICRAT Presentations and Technical Papers](./papers/)
-
-ICRAT 2022 is planned to be held at the University of South Florida in Tampa, Florida in early summer 2022.
-
-<img src="./USF-COE.jpg" class="img-responsive center-block"/>
