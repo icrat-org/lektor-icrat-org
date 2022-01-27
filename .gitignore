@@ -1,5 +1,6 @@
 seminarContent/
 build/
+temp/
 *.pyc
 *.swp
 .~lock*
