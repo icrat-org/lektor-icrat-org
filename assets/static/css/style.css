@@ -123,6 +123,7 @@ div.info-table  th, td {
 }
 
 fieldset {
+text-align: center;
 border:2px solid #ccc;
 background:#fff;
 padding: 5px;
