@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ICRAT 2022</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="International Conference on Research in Air Transportation">
+    <meta name="keywords" content="aviation, aircraft, safety, flight efficiency, trajectory management, airport, aerodrome, operation research, optimization, machine learning">
+    <meta name="author" content="EUROCONTROL, FAA">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+        .page-loading.active > .page-loading-inner {
+            opacity: 1;
+        }
+        .page-loading-inner > span {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #9397ad;
+        }
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #b4b7c9;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+        .dark-mode .page-spinner {
+            border-color: rgba(255,255,255,.4);
+            border-right-color: transparent;
+        }
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+        (function () {
+            window.onload = function () {
+                const preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function () {
+                    preloader.remove();
+                }, 1000);
+            };
+        })();
+    </script>
+</head>
+
+
+<!-- Body -->
+<body>
+
+<!-- Page loading spinner -->
+<div class="page-loading active">
+    <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+    </div>
+</div>
+
+<main class="page-wrapper">
+
+    <!-- Navbar -->
+    <header class="header navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+        <div class="container px-3">
+            <a href="index.html" class="navbar-brand pe-3">
+                <img src="img/header-globe.png" width="47" alt="ICRAT">
+                ICRAT
+            </a>
+            <div id="navbarNav" class="offcanvas offcanvas-end">
+                <div class="offcanvas-header border-bottom">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="index-registration.html#upcoming" class="nav-link" data-scroll>Upcoming Conference</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index-registration.html#about" class="nav-link" data-scroll>About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index-registration.html#schedule" class="nav-link" data-scroll>Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index-registration.html#committee" class="nav-link" data-scroll>Committee</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index-registration.html#venue" class="nav-link" data-scroll>Venue</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Previous Conferences</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./9th-international-conference/" class="dropdown-item">ICRAT 2020 - 9th International Conference</a></li>
+                                <li><a href="./8th-international-conference/" class="dropdown-item">ICRAT 2018 - 8th International Conference</a></li>
+                                <li><a href="./7th-international-conference/" class="dropdown-item">ICRAT 2016 - 7th International Conference</a></li>
+                                <li><a href="./6th-international-conference/" class="dropdown-item">ICRAT 2014 - 6th International Conference</a></li>
+                                <li><a href="./5th-international-conference/" class="dropdown-item">ICRAT 2012 - 5th International Conference</a></li>
+                                <li><a href="./4th-international-conference/" class="dropdown-item">ICRAT 2010 - 4th International Conference</a></li>
+                                <li><a href="./3rd-international-conference/" class="dropdown-item">ICRAT 2008 - 3rd International Conference</a></li>
+                                <li><a href="./2nd-international-conference/" class="dropdown-item">ICRAT 2006 - 2nd International Conference</a></li>
+                                <li><span class="dropdown-item disabled">ICRAT 2004 - 1st International Conference</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="offcanvas-footer border-top">
+                    <a href="registration.html" class="btn btn-primary w-100">
+                        Registration
+                    </a>
+                </div>
+            </div>
+            <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="registration.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+                Registration
+            </a>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="container position-relative px-0 pt-5 mt-5 mb-1" aria-label="breadcrumb">
+        <ol class="breadcrumb pt-lg-3 mb-0">
+            <li class="breadcrumb-item">
+                <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="icrat-2018.html">ICRAT 2018</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Student Grand Challenge</li>
+        </ol>
+    </nav>
+
+    <section class="container">
+        <h1 class="text-center">Student Grand Challenge</h1>
+        <h2>Grand Challenge Background</h2>
+        <p>As Air traffic operations expand both in the U.S. National Airspace System (NAS) and the so-called Single European Sky (SES), advanced techniques for managing aircraft 4D trajectories will be increasingly utilized, particularly in high density airspace such as large US metroplexes or big European hubs. The cornerstone to both the FAA’s NextGen and the SES ATM Research (SESAR) initiative is the transition of today’s air traffic control services to trajectory based operations (TBO). TBO concept envisions the integration of today’s domain-specific air traffic management (ATM) tools with advanced functions already available in most commercial transport aircraft today into “gate-to-gate” decision-support capabilities with the goal of maximizing efficiency over the entire flight-planning, operation and turn-around cycle, wherein cost functions become increasingly multivariate. TBO will leverage on improvements in navigation accuracy, communications, surveillance, and automation to minimize aircraft position uncertainty in all four dimensions. These improvements rely on a system wide information sharing (called SWIM in Europe) with all authorized users, resulting in consistent information across all systems and actors. Better information and seamless information access based on standard information exchange models will provide users and operators in tomorrow’s airspace with common awareness, a more accurate view of the entire system, and improved decision making tools to increase system capacity and safety, improve flight efficiency, and provide users with enhanced operational flexibility.</p>
+        <p>However, resiliency and robustness of these tools during off-nominal conditions, in particular convective weather, is still a major research issue. Forecasts of the timing, location, intensity and duration of significant weather such as thunderstorm or heavy snow fall impacts on ATM resources over the day of operation required for gate-to-gate planning contain obvious uncertainty, and current ATM functions are not structured to deal with this uncertainty, reliably. New techniques for weather observation and forecasting are needed, particularly in the “planetary boundary layer (PBL)” where convective initiation occurs, and effective methods for coupling these observations to high-resolution weather forecasting models must be developed. The resulting enhanced forecasts of adverse weather must be integrated into both “traditional” ATM services and new ATM processes required to accommodate emerging, highly automated ATM entrants such as Unmanned Aircraft Systems (UAS).</p>
+        <h2>Grand Challenge Problem Description</h2>
+        <p>To facilitate the advancement of the grand challenge described above, student teams shall develop, analyze and test low-altitude airspace management concepts necessary to enable small Unmanned Aircraft Systems (sUAS) to routinely and autonomously perform in situ observations of pressure, temperature, moisture and winds well into the planetary boundary layer (0-1500 m AGL). A network of sUAS observing systems would be deployed so as to capture important atmospheric structures (frontal surfaces, outflow boundaries, temperature inversions) in operationally relevant airspace, with the very high spatial and temporal resolution required for effective assimilation into “convection allowing” numerical weather ensemble prediction models. The concept may include integration of complementary sensing capabilities, such as automated, downlinked weather messages from General Aviation (GA) aircraft which routinely operate in the PBL or innovative ground based sensors such as LIDAR.<br>
+            Student teams shall develop and assess an overall concept of operations (CONOPS) for this next generation PBL observing/forecasting system and analyze its potential ATM benefit relative to the specific airspace and operational scenarios defined below. Components of the research may include:</p>
+        <ul>
+            <li>development of the observing system architecture (e.g., sUAS network configuration, frequency and vertical extent of observations, role of complementary observing assets such as GA aircraft, additional sensors on ground, communications infrastructure, command and control concepts) leading to a requirement set for the CONOPS; </li>
+            <li>discussion of ATM and environmental conditions that would activate this special observing system and how the specifics of these conditions affect the manner in which the observing systems or network of systems operate;</li>
+            <li>analysis of applicable technologies and ATM processes necessary to assure conflict-free operation of the enhanced PBL observing system in the compatible with current guidance material such as ICAO Doc. 4444. Assumptions as to modifications to procedural or regulatory changes from there in the envisioned “future ATM system” are encouraged but should be clearly articulated and argued. The concept should leverage advanced surveillance capabilities and sUAS-focused ATM concepts such as NASA’s UAS Traffic Management (UTM) paradigm and EASA’s Technical Opinion on Safe Use of Drones (UAS). Interactions with the “traditional” or manned ATM service provider should also be considered in the CONOPS and addressed in associated analysis and experiments.  </li>
+        </ul>
+        <p>Specific objectives are to develop procedural and technological elements necessary to assure safe separation from manned aircraft, understand information flows and coordination requirements with the “traditional” ATM service, understand unique weather information requirements for assuring that the weather-observing sUAS can adhere to trajectory constraints, and apply safety assessment methodologies such as Euroncontrol’s SAM to it. The results should be discussed in the light of existing target-level-of-safety values.</p>
+        <h2>Specific Airspace and ATM Scenarios</h2>
+        <p>Student teams shall develop, analyze and test their concept in the context of observed convective weather impacts in the airspace surrounding Dallas-Ft. Worth Airport as a given use case. Table 1 is a list of dates and approximate impact times from which students may develop their scenarios. Note that the listed time generally represents the beginning of significant flow disruptions and/or airport delay.  Representative data will be provided in-time for the Challenge.</p>
+
+        <figure class="figure d-block w-lg-50 m-auto mb-4">
+            <table class="table text-center">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>21 April 2017</td>
+                    <td>2000 Z</td>
+                </tr>
+                <tr>
+                    <td>29 April 2017</td>
+                    <td>2300 Z</td>
+                </tr>
+                <tr>
+                    <td>3 May 2017</td>
+                    <td>1700 Z</td>
+                </tr>
+                <tr>
+                    <td>8 July 2017</td>
+                    <td>2300 Z</td>
+                </tr>
+                <tr>
+                    <td>7 August 2017</td>
+                    <td>0000 Z</td>
+                </tr>
+                </tbody>
+            </table>
+            <figcaption class="figure-caption text-center">Table 1:  List of example date/times when significant convective weather impacts to air traffic occurred at DFW.</figcaption>
+        </figure>
+
+        <p>Figure 1 illustrates the meteorological scenario on one of these dates – 29 April 2017.  The top figures show 4-8 hour lead time forecasts of storm intensity during the time period preceding the significant air traffic impact. These are derived from NOAA’s operational “high resolution rapid refresh (HRRR)” model, which in turn is an input to the FAA’s “Consolidated Storm Prediction for Aviation” product displayed in the figure. For comparison, the bottom row is observed radar reflectivity at the forecast output times.  In this case, the forecasts incorrectly indicated that a line of storms would pass over DFW at around 2200 Z, and did not capture the explosive growth of new storms to the east of DFW beginning at around 2100 Z. It is plausible that continuous sUAS soundings of atmospheric parameters in relatively remote airspace east and west of the DFW Metroplex could have significantly improved the quality of these forecasts, thereby enabling more effective ATM.</p>
+        <h2>Data Acquisition Requirements</h2>
+        <p>By way of guidance, the student teams should assume that the sUAS soundings would provide measurements of temperature, wind, pressure, humidity and water vapor. The profiling stations would be deployed on a mesoscale grid with separations of approximately 50 km; notionally a total of 100 such stations might be available although only a subset would be activated, based on the environmental situation and aviation operations.  The frequency and altitude extent of soundings would also be environmentally dependent and subject to operational constraints.  Notionally, soundings would take place once every 1-3 hours and would extend high enough into the PBL to capture important features such as the prevalent “capping” inversion.  Student teams are encouraged to analyze observing system requirements and justify their operations concepts accordingly.</p>
+
+        <figure class="figure d-block w-lg-50 m-auto mb-4">
+            <img src="img/castelldefels/cospa_forecasts.png" class="figure-img"/>
+            <figcaption class="figure-caption text-center">Figure 1:  Four, six and eight hour lead time CoSPA forecasts and corresponding weather radar observations in north Texas on 29 April 2017.</figcaption>
+        </figure>
+
+        <h2>Research Questions</h2>
+        <p>The project report and presentation must explicitly address important questions about the team’s proposed solution.  The team will provide answers to the following high-level questions.  Each provides examples of the type of information that a high-quality answer to the question might include.</p>
+        <ol>
+            <li>What does your proposed solution do and how does it work?<ul>
+                <li>System scope, solution space</li>
+                <li>Key functions and features</li>
+                <li>Information flows among key components</li>
+            </ul>
+            </li>
+            <li>What were some of the key design considerations?<ul>
+                <li>What aspects of the solution makes it effective?</li>
+                <li>What aspects of the solution make it innovative?</li>
+            </ul>
+            </li>
+            <li>What were the key requirements for your proposed solution?<ul>
+                <li>Drivers, dependencies</li>
+                <li>Limiting factors</li>
+            </ul>
+            </li>
+            <li>What trade-offs did you have to consider?<ul>
+                <li>Cost-benefit analyses</li>
+            </ul>
+            </li>
+            <li>What other research and approaches did you consider in developing your proposed solution?<ul>
+                <li>Alternatives</li>
+                <li>Decision rationales</li>
+            </ul>
+            </li>
+            <li>How did you ensure the proposed solution will meet the requirements laid out in the problem statement?<ul>
+                <li>Prototypes, iterative design</li>
+                <li>Evaluations and tests</li>
+            </ul>
+            </li>
+            <li>How does your proposed solution generate and use data?<ul>
+                <li>Formats and interfaces</li>
+                <li>Information flows</li>
+                <li>Data reduction, analysis, and visual tools</li>
+            </ul>
+            </li>
+            <li>What human factors issues and considerations are associated with your proposed solution?<ul>
+                <li>Intended users, tasks, and usage environment</li>
+                <li>Metrics of human + system performance</li>
+                <li>Possibilities for human error, possible mitigations</li>
+            </ul>
+            </li>
+            <li>How do you ensure that your proposed solution is safe and secure?<ul>
+                <li>Potential vulnerabilities</li>
+                <li>Suggested mitigations</li>
+            </ul>
+            </li>
+            <li>What were some of the major issues that you had to resolve?<ul>
+                <li>Unintended consequences</li>
+                <li>Complex interactions</li>
+                <li>Emergent requirements</li>
+            </ul>
+            </li>
+            <li>What are some of the operational issues you considered and how did you evaluate them?<ul>
+                <li>Procedures, training</li>
+                <li>Long-term sustainability</li>
+                <li>Interactions with other systems or programs</li>
+            </ul>
+            </li>
+            <li>Is your proposed solution feasible and economically viable?<ul>
+                <li>Cost-benefit analyses</li>
+                <li>Market analyses</li>
+            </ul>
+            </li>
+            <li>What did you learn from this exercise / what would you do differently if you could start over?</li>
+        </ol>
+        <h2>Evaluation Criteria</h2>
+        <ol>
+            <li><u>Originality and breadth of concept.</u>  To what extent does the proposed concept employ novel approaches to meeting the operational goals described above while assuring inter-operability with the ATM system as whole?  Does the concept shed light on broader questions related to the future ATM system, e.g. how it will accommodate potentially large numbers of highly automated aircraft (UAS, on-demand urban eVTOL, etc) operating at relatively low altitude?</li>
+            <li><u>Fidelity of concept analysis:</u> What methods (data analysis, fast-time-simulation, human-in-the-loop studies, prototyping, facility studies, etc.) are employed and with what fidelity do they address the research questions developed by the student teams?  How convincing are the findings that result from this effort and how could they be further tested in future research?</li>
+            <li><u>Quality of project artifacts:</u>  It is expected that student teams will periodically present their research progress to the evaluation team, culminating in a final presentation and accompanying “journal quality” research paper for the 8th ICRAT conference.</li>
+        </ol>
+        <h2>Supplied Support Data</h2>
+        <ol>
+            <li>Traffic data for the Dallas Fort Worth (DFW) airspace during the chosen scenario dates has been collected for the student teams.  These can be used both in analyzing traffic impacts that occurred during the defined convective scenario, and in assessing the viability of student-developed concepts for assuring conflict free operations of the conceptual PBL observing system. Contact <a href="mailto:mike.paglione@faa.gov">mike.paglione@faa.gov</a> for traffic data requests.  Please identify the name of your ICRAT Grand Challenge student team and send the message from an academic email affiliation (e.g. .edu).</li>
+            <li>Description of airspace volumes, the airports, and various arrival and departure procedures are publicly available at the following FAA website where both digital and chart data can be directly downloaded. Using this information on nominal operations and with the sample traffic data provided, student teams can examine the causality of traffic impacts during the chosen scenario(s).  The following URL is at the home web page: <a href="https://www.faa.gov/air_traffic/flight_info/aeronav/">https://www.faa.gov/air_traffic/flight_info/aeronav/</a></li>
+            <li>Archived operational weather data, for archived forecasts and weather radar observations from sites operated by Lincoln Laboratory: <a href="https://ciws.wx.ll.mit.edu">https://ciws.wx.ll.mit.edu</a> and <a href="https://cospa.wx.ll.mit.edu">https://cospa.wx.ll.mit.edu</a>.
+                These data may be used in conjunction with the traffic data to assess “as is” performance during the defined convective scenario, and to articulate possible traffic flow modifications that might have provided better performance given more accurate predictions of the convection.</li>
+        </ol>
+        <h2>Proposal</h2>
+        <p>Student teams are to submit a brief outline proposal (5 pages max, 12-point font, single spaced) indicating the approach to the research questions listed above. Responses the questions should indicate the breadth and depth of understanding and the intended approach. Outline proposals are due by 16 February  2018. The selected will be further developed with PC assistance over the period March-June.</p>
+        <h2>Support</h2>
+        <p>Consistent with the philosophy of the ICRAT Conference, and based on availability of funds, the conference committee will strive to provide financial support to cover conference attendance and travel.  This will be based on need and funding availability. It is also anticipated that the winning Grand Challenge Team will receive an honorary and monetary prize.</p>
+        <h2>Schedule</h2>
+        <p>20 December 2017:  Challenge Release</p>
+        <p>16 February 2018:  Student team proposals due</p>
+        <p>26 February 2018:  Selection of proposals for the competition</p>
+        <p>09 March 2018:  Kickoff meeting (via web meeting) with each team</p>
+        <p>06 April 2018:  1st Progress review meeting</p>
+        <p>04 May 2018:  2nd Progress review meeting</p>
+        <p>June 2018:  Final presentations at ICRAT and Grand Challenge Winner Selection</p>
+    </section>
+
+    <section class="container py-5">
+        <img src="img/castelldefels/2018_boeing_sponsor.png" class="d-block m-auto" alt="2018 Sponsor: The Boeing Company">
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer dark-mode bg-info pt-5 pb-4 pb-lg-5">
+    <div class="container text-center pt-lg-3">
+        <div class="d-flex align-items-center justify-content-center mb-3">
+            <div class="navbar-brand text-dark mx-4">
+                <img src="img/header-globe.png" class="me-2" width="60" alt="ICRAT">
+                <span class="fs-4">ICRAT</span>
+            </div>
+            <div class="mx-4">
+                <img src="img/ec-mono-white.png" width="60" alt="EUROCONTROL">
+            </div>
+            <div class="mx-4">
+                <img src="img/faa.png" width="60" alt="FAA">
+            </div>
+        </div>
+        <ul class="nav justify-content-center pt-3 pb-4 pb-lg-5">
+            <li class="nav-item"><a href="index-registration.html" class="nav-link" data-scroll>Home</a></li>
+            <li class="nav-item"><a href="index-registration.html#upcoming" class="nav-link" data-scroll>Upcoming conference</a></li>
+            <li class="nav-item"><a href="index-registration.html#about" class="nav-link" data-scroll>About</a></li>
+            <li class="nav-item"><a href="index-registration.html#schedule" class="nav-link" data-scroll>Schedule</a></li>
+            <li class="nav-item"><a href="index-registration.html#committee" class="nav-link" data-scroll>Committee</a></li>
+            <li class="nav-item"><a href="index-registration.html#venue" class="nav-link" data-scroll>Venue</a></li>
+        </ul>
+        <p class="fs-sm text-center pt-4 mt-lg-4 mb-0">
+            <span class="text-light opacity-50">&copy; All rights reserved. ICRAT 2022</span>
+        </p>
+    </div>
+</footer>
+
+
+<!-- Back to top button -->
+<a href="#top" class="btn-scroll-top" data-scroll>
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+</a>
+
+
+<!-- Vendor Scripts -->
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+<script src="assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+<script src="assets/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+<script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+
+<!-- Main Theme Script -->
+<script src="assets/js/theme.min.js"></script>
+</body>
+</html>

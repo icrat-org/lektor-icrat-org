@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ICRAT 2022</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="International Conference on Research in Air Transportation">
+    <meta name="keywords" content="aviation, aircraft, safety, flight efficiency, trajectory management, airport, aerodrome, operation research, optimization, machine learning">
+    <meta name="author" content="EUROCONTROL, FAA">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+        .page-loading.active > .page-loading-inner {
+            opacity: 1;
+        }
+        .page-loading-inner > span {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #9397ad;
+        }
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #b4b7c9;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+        (function () {
+            window.onload = function () {
+                const preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function () {
+                    preloader.remove();
+                }, 1000);
+            };
+        })();
+    </script>
+</head>
+
+
+<!-- Body -->
+<body>
+
+<!-- Page loading spinner -->
+<div class="page-loading active">
+    <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+    </div>
+</div>
+
+<main class="page-wrapper">
+
+    <!-- Navbar -->
+    <header class="header navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+        <div class="container px-3">
+            <a href="index.html" class="navbar-brand pe-3">
+                <img src="img/header-globe.png" width="47" alt="ICRAT">
+                ICRAT
+            </a>
+            <div id="navbarNav" class="offcanvas offcanvas-end">
+                <div class="offcanvas-header border-bottom">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="index-registration.html#upcoming" class="nav-link" data-scroll>Upcoming Conference</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index-registration.html#about" class="nav-link" data-scroll>About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index-registration.html#schedule" class="nav-link" data-scroll>Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index-registration.html#committee" class="nav-link" data-scroll>Committee</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index-registration.html#venue" class="nav-link" data-scroll>Venue</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Previous Conferences</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./9th-international-conference/" class="dropdown-item">ICRAT 2020 - 9th International Conference</a></li>
+                                <li><a href="./8th-international-conference/" class="dropdown-item">ICRAT 2018 - 8th International Conference</a></li>
+                                <li><a href="./7th-international-conference/" class="dropdown-item">ICRAT 2016 - 7th International Conference</a></li>
+                                <li><a href="./6th-international-conference/" class="dropdown-item">ICRAT 2014 - 6th International Conference</a></li>
+                                <li><a href="./5th-international-conference/" class="dropdown-item">ICRAT 2012 - 5th International Conference</a></li>
+                                <li><a href="./4th-international-conference/" class="dropdown-item">ICRAT 2010 - 4th International Conference</a></li>
+                                <li><a href="./3rd-international-conference/" class="dropdown-item">ICRAT 2008 - 3rd International Conference</a></li>
+                                <li><a href="./2nd-international-conference/" class="dropdown-item">ICRAT 2006 - 2nd International Conference</a></li>
+                                <li><span class="dropdown-item disabled">ICRAT 2004 - 1st International Conference</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="offcanvas-footer border-top">
+                    <a href="registration.html" class="btn btn-primary w-100">Registration</a>
+                </div>
+            </div>
+            <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="registration.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+                Registration
+            </a>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="container position-relative px-0 pt-5 mt-5 mb-1" aria-label="breadcrumb">
+        <ol class="breadcrumb pt-lg-3 mb-0">
+            <li class="breadcrumb-item">
+                <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="index-registration.html">ICRAT 2022</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Tampa Area Information</li>
+        </ol>
+    </nav>
+
+    <h1 class="container pb-3 pb-lg-4 text-center">Tampa Area Information</h1>
+
+    <section class="container mb-md-3 mb-lg-5 pb-5">
+        <div class="row">
+            <div class="col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
+                <div class="pe-lg-5">
+                    <img src="img/tampa/sunshine_skyway.jpg" class="rounded-3" alt="Image">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="h3 mb-sm-4">Sunshine Skyway Bridge</h2>
+                <p>The Bob Graham Sunshine Skyway Bridge, often referred to as the Sunshine Skyway Bridge or simply the Skyway, is a cable-stayed bridge spanning the Lower Tampa Bay connecting St. Petersburg, Florida to Terra Ceia. The current Sunshine Skyway opened in 1987 and is the second bridge of that name on the site.</p>
+                <p class="text-muted"><i class="bx bx-map text-primary"></i> 7508-7534 Sunshine Skyway Ln S, St. Petersburg, FL 33711</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container pt-2 pt-lg-3 mb-md-3 mb-lg-5 pb-5">
+        <div class="row">
+            <div class="col-md-6 order-md-2 pb-2 pb-md-0 mb-4 mb-md-0">
+                <div class="ps-lg-5">
+                    <img src="img/tampa/tampa_riverwalk.jpg" class="rounded-3" alt="Image">
+                </div>
+            </div>
+            <div class="col-md-6 ordr-md-1">
+                <h2 class="h3 mb-sm-4">Tampa Riverwalk</h2>
+                <p>The Tampa Riverwalk is a 2.6-mile-long (4.2 km) open space and pedestrian trail along the Hillsborough River in Tampa, Florida. The Riverwalk extends along most of the downtown Tampa waterfront from the Channelside District on the eastern terminus to the mouth of the Hillsborough River and then north along the riverside to Tampa Heights, forming a continuous path that connects a multitude of parks, attractions, public spaces, and hotels.</p>
+                <p class="text-muted"><i class="bx bx-map text-primary"></i> Tampa Riverwalk, Tampa, FL 33602</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-md-3 mb-lg-5 pb-5">
+        <div class="row">
+            <div class="col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
+                <div class="pe-lg-5">
+                    <img src="img/tampa/florida_aquarium.jpg" class="rounded-3" alt="Image">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="h3 mb-sm-4">Florida Aquarium</h2>
+                <p>The Florida Aquarium is one of the top aquariums in the country, with over 9,000 aquatic creatures, including sharks, otters, alligators and many more. Walk along the Wetlands Trail past alligator-infested waters to the river streams where otters play and explore. Then stroll along the Bays & Beaches habitats and touch a variety of different species of stingrays and sharks at a touch pool called Stingray Beach. Look for white-spotted bamboo sharks, southern rays and more. Check out Waves of Wonder, a colorful exhibit with unique jellies, colorful clownfish, a pacific octopus, and more. And don’t forget to check out the outdoor water fun zone for children called Splash Pad. Check out the one-of-a-kind view at the Coral Reef Gallery, one of the most beautiful and diverse ecosystems in the world.</p>
+                <p class="text-muted"><i class="bx bx-map text-primary"></i> 701 Channelside Dr, Tampa, FL 33602</p>
+                <div class="d-flex flex-column flex-sm-row">
+                    <a href="https://www.flaquarium.org/" class="btn btn-primary mb-3 mb-sm-0 me-sm-3">More information</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container pt-2 pt-lg-3 mb-md-3 mb-lg-5 pb-5">
+        <div class="row">
+            <div class="col-md-6 order-md-2 pb-2 pb-md-0 mb-4 mb-md-0">
+                <div class="ps-lg-5">
+                    <img src="img/tampa/busch_gardens.jpg" class="rounded-3" alt="Image">
+                </div>
+            </div>
+            <div class="col-md-6 ordr-md-1">
+                <h2 class="h3 mb-sm-4">Busch Gardens</h2>
+                <p>As one of the largest zoos in North America, Busch Gardens Tampa provides an unforgettable experience for the entire family. The park is home to 12,000 animals representing more than 250 species. From alligators and elephants to hippos and hyenas, there is a huge variety of animals to see—and get close to. In fact, Busch Gardens brings guests face-to-face (literally) with more exotic and endangered species than any attraction outside of Africa. Fly above the trees on a zipline and try your strength in a tug of war with a Bengal tiger in Jungala. The park’s large collection of roller coasters makes it Florida’s top spot for thrill rides. Try SheiKra, the first dive coaster in the country. Upgrade this ticket to include admission to SeaWorld Orlando, a theme park offering more roller coasters, rides, shows, attractions and family-friendly activities for thrill-seekers and animal lovers alike. See dolphins, white beluga whales, and penguins. Plus visit Adventure Island Tampa or Aquatica, SeaWorld’s waterparks, with rivers to float in and enclosed tube slides. All-day parking and unlimited parking options are available for purchase.</p>
+                <div class="d-flex flex-column flex-sm-row">
+                    <a href="https://buschgardens.com/" class="btn btn-primary mb-3 mb-sm-0 me-sm-3">More information</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-md-3 mb-lg-5 pb-5">
+        <div class="row">
+            <div class="col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
+                <div class="pe-lg-5">
+                    <img src="img/tampa/lettuce_park.jpg" class="rounded-3" alt="Image">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="h3 mb-sm-4">Lettuce Park</h2>
+                <p>Lettuce Lake Conservation Park is one of Hillsborough County's most visited parks. More than half of the park’s property lies in the natural floodplain of the Hillsborough River, consisting of a hardwood swamp forest. The remainder of the park consists of hardwood hammocks and pine flatwoods plant communities.</p>
+                <p class="text-muted"><i class="bx bx-map text-primary"></i> 6920 East Fletcher Avenue Tampa, FL 33637</p>
+                <div class="d-flex flex-column flex-sm-row">
+                    <a href="https://www.hillsboroughcounty.org/locations/lettuce-lake-conservation-park" class="btn btn-primary mb-3 mb-sm-0 me-sm-3">More information</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container pt-2 pt-lg-3 mb-md-3 mb-lg-5 pb-5">
+        <div class="row">
+            <div class="col-md-6 order-md-2 pb-2 pb-md-0 mb-4 mb-md-0">
+                <div class="ps-lg-5">
+                    <img src="img/tampa/ybor_city.jpg" class="rounded-3" alt="Image">
+                </div>
+            </div>
+            <div class="col-md-6 ordr-md-1">
+                <h2 class="h3 mb-sm-4">Ybor City</h2>
+                <p>Lively Ybor City is known for boutiques and vintage shops on 7th Avenue, which also hosts Cuban and Latin American eateries. The Centro Ybor mall offers indie fast food, bars, and a cinema. Housed in a 1920s bakery, Ybor City State Museum has exhibits on the cigar industry and the area’s immigrant communities.</p>
+                <p class="text-muted"><i class="bx bx-map text-primary"></i> 1600 E. 8th Avenue, Tampa, FL 33605</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-md-3 mb-lg-5 pb-5">
+        <div class="row">
+            <div class="col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
+                <div class="pe-lg-5">
+                    <img src="img/tampa/clearwater_beach.jpg" class="rounded-3" alt="Image">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="h3 mb-sm-4">Clearwater Beach</h2>
+                <p>White sand beach, turquoise waters of the Gulf of Mexico, a marina full of different boat tour options, a pier out into the water. This is the ultimate day to relax at a beach that has been rated #1 in the United States by many travel websites!</p>
+                <p class="text-muted"><i class="bx bx-map text-primary"></i> Clearwater Beach, Causeway Blvd, Clearwater, FL 33767</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container pt-2 pt-lg-3 mb-md-3 mb-lg-5 pb-5">
+        <div class="row">
+            <div class="col-md-6 order-md-2 pb-2 pb-md-0 mb-4 mb-md-0">
+                <div class="ps-lg-5">
+                    <img src="img/tampa/tampa_indoor_skydiving.jpg" class="rounded-3" alt="Tampa Indoor SkyDiving">
+                </div>
+            </div>
+            <div class="col-md-6 ordr-md-1">
+                <h2 class="h3 mb-sm-4">Tampa Indoor SkyDiving</h2>
+                <p>Discover what skydiving feels like without the throw-yourself-out-of-a-plane part during an indoor experience in Florida. At iFLY Tampa, you'll "fly" inside a vertical wind tunnel, which mimics the free-fall of skydiving. Training is provided, and no experience is required.</p>
+                <p class="text-muted"><i class="bx bx-map text-primary"></i> 10654 Palm River Rd, Tampa, FL 33619</p>
+                <div class="d-flex flex-column flex-sm-row">
+                    <a href="https://www.iflyworld.com/tampa/" class="btn btn-primary mb-3 mb-sm-0 me-sm-3">More information</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row mb-4">
+            <h2 class="h3 mb-sm-4 text-center">Theme Parks in Orlando</h2>
+            <p style="max-width: 800px" class="text-center m-auto">The best theme parks in the world, Disney World and Universal Only, are only 1.5 hour away from USF campus. You can plan your visit from the following links:</p>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <div class="card">
+                    <img src="img/tampa/seaworld_orlando.jpg" class="card-img-top" alt="Sea World Orlando">
+                </div>
+                <div class="card-body text-center h5">
+                    <a href="https://seaworld.com/orlando/">SeaWorld Orlando</a>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card">
+                    <img src="img/tampa/universal_theme_park.jpg" class="card-img-top" alt="Universal Theme Park">
+                </div>
+                <div class="card-body text-center h5">
+                    <a href="https://www.universalorlando.com/web/en/us/tickets-packages/park-tickets">Universal Theme Park</a>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card">
+                    <img src="img/tampa/walt_disney_world.jpg" class="card-img-top" alt="Walt Disney World">
+                </div>
+                <div class="card-body text-center h5">
+                    <a href="https://disneyworld.disney.go.com">Walt Disney World</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer dark-mode bg-info pt-5 pb-4 pb-lg-5">
+    <div class="container text-center pt-lg-3">
+        <div class="d-flex align-items-center justify-content-center mb-3">
+            <div class="navbar-brand text-dark mx-4">
+                <img src="img/header-globe.png" class="me-2" width="60" alt="ICRAT">
+                <span class="fs-4">ICRAT</span>
+            </div>
+            <div class="mx-4">
+                <img src="img/ec-mono-white.png" width="60" alt="EUROCONTROL">
+            </div>
+            <div class="mx-4">
+                <img src="img/faa.png" width="60" alt="FAA">
+            </div>
+        </div>
+        <ul class="nav justify-content-center pt-3 pb-4 pb-lg-5">
+            <li class="nav-item"><a href="index-registration.html" class="nav-link" data-scroll>Home</a></li>
+            <li class="nav-item"><a href="index-registration.html#upcoming" class="nav-link" data-scroll>Upcoming conference</a></li>
+            <li class="nav-item"><a href="index-registration.html#about" class="nav-link" data-scroll>About</a></li>
+            <li class="nav-item"><a href="index-registration.html#schedule" class="nav-link" data-scroll>Schedule</a></li>
+            <li class="nav-item"><a href="index-registration.html#committee" class="nav-link" data-scroll>Committee</a></li>
+            <li class="nav-item"><a href="index-registration.html#venue" class="nav-link" data-scroll>Venue</a></li>
+        </ul>
+        <p class="fs-sm text-center pt-4 mt-lg-4 mb-0">
+            <span class="text-light opacity-50">&copy; All rights reserved. ICRAT 2022</span>
+        </p>
+    </div>
+</footer>
+
+
+<!-- Back to top button -->
+<a href="#top" class="btn-scroll-top" data-scroll>
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+</a>
+
+
+<!-- Vendor Scripts -->
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+<script src="assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+<script src="assets/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+<script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+
+<!-- Main Theme Script -->
+<script src="assets/js/theme.min.js"></script>
+</body>
+</html>
