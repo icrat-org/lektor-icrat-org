@@ -1,0 +1,997 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+
+<main class="page-wrapper">
+
+    {% include "navigation.html" %}
+
+    <!-- Video + Title split section -->
+    <section class="container-fluid position-relative px-0 pt-5 mt-3 mt-lg-4">
+        <div class="row g-0">
+            <div class="col-xl-7 col-lg-6 pe-lg-5">
+                <div class="d-flex h-100 pe-xl-4">
+                    <img src="{{'static/img/banner-optimised-operational-performance.jpg' | url}}" style="object-fit: cover; filter: brightness(80%)" alt="welcome banner">
+                    <!-- <video class="w-100" autoplay muted loop style="object-fit: cover;">
+                        <source src="{{'static/assets/img/landing/conference/hero-video.mp4' | url}}" type="video/mp4">
+                    </video> -->
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-6 position-relative py-5">
+               <div class="position-relative zindex-5 text-center text-lg-start px-3 px-lg-0 py-xl-4 py-xxl-5 mt-lg-3 mx-auto mx-lg-0" style="max-width: 530px;">
+                   <h2 class="h3 text-primary">{{this.next_date}}</h2>
+                    <h1 class="display-2 pb-lg-3 mb-3">{{this.title}}</h1>
+                    <div class="d-flex justify-content-center justify-content-lg-start text-start mb-2">
+                        <i class="bx bx-map fs-4 text-primary me-2"></i>
+                        <div class="fs-xl">{{this.next_location}}</div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center justify-content-lg-start py-4 py-lg-5">
+                        <a href="registration.html" class="btn btn-primary shadow-primary btn-lg me-sm-3 me-xl-4 mb-3">Registration</a>
+                        <a href="sponsoring-opportunities.html" class="btn btn-primary shadow-primary btn-lg me-sm-3 me-xl-4 mb-3">Sponsoring Opportunities</a>
+                        <a href="https://easychair.org/conferences/?conf=icrat2022" class="btn btn-outline-primary btn-lg me-sm-3 me-xl-4 mb-3">Easychair Page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="position-absolute d-none d-lg-block bottom-0 start-0 w-100 zindex-5 pb-xxl-5">
+            <div class="container pb-4 mb-3 mb-xxl-0">
+                <a href="#upcoming" class="d-table text-light opacity-80 text-decoration-none w-auto py-4" data-scroll data-scroll-offset="70">
+              <span class="d-flex align-items-center">
+                Scroll for more
+                <i class="bx bx-down-arrow-circle fs-3 ms-2"></i>
+              </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors -->
+    <section class="bg-info py-5">
+        <div class="container pt-1 pt-md-2 pb-lg-2 pt-lg-4">
+            <h2 class="h3 text-light text-center text-lg-start mb-4 mb-lg-5">Sponsors:</h2>
+            <div class="swiper ms-xxl-n5 me-xxl-n4" data-swiper-options='{
+            "slidesPerView": 2,
+            "spaceBetween": 24,
+            "pagination": {
+              "el": ".swiper-pagination",
+              "clickable": true
+            },
+            "breakpoints": {
+              "500": {
+                "slidesPerView": 3
+              },
+              "650": {
+                "slidesPerView": 4
+              },
+              "900": {
+                "slidesPerView": 5
+              },
+              "1100": {
+                "slidesPerView": 6
+              }
+            }
+          }'>
+                {% set sponsors = sponsors_csv(year='2022') %}
+                <div class="swiper-wrapper align-items-center">
+
+                    <!-- Item -->
+                    <div class="swiper-slide">
+                        <img src="{{'static/img/ec-mono-white.png' | url}}" class="d-block py-3 mx-auto" width="100" alt="EUROCONTROL">
+                    </div>
+
+                    <!-- Item -->
+                    <div class="swiper-slide">
+                        <img src="{{'static/img/faa.png' | url}}" class="d-block py-3 mx-auto" width="100" alt="Federal Aviation Administration">
+                    </div>
+
+                    {% for sponsor in sponsors %}
+
+                    <!-- Item -->
+                    <div class="swiper-slide">
+                        <img src="{{'static/' + sponsor['small_logo'] | url}}" class="d-block py-3 mx-auto" width="154" alt="{{sponsor.alt}}">
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+
+                <!-- Pagination (bullets) -->
+                <div class="swiper-pagination dark-mode position-relative pt-2 mt-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming conference -->
+    <section class="container pb-5 my-2 my-md-4 my-lg-5" id="upcoming">
+        <div class="row">
+            <div class="col-lg">
+                <h2>{{this.title}}</h2>
+                {{ this.body }}
+            </div>
+
+            <div class="col-lg-3 pt-4 mt-4">
+                <h3 class="text-center h4">Further read</h3>
+                <div class="btn-group-vertical d-flex shadow-primary">
+                    <a class="btn btn-lg btn-outline-primary" href="#venue"><i class="bx bx-chevron-right"></i> Venue</a>
+                    {% set upcoming_conference_children = site.get('/upcoming-conference/').children %}
+                    {% for upcoming_child in upcoming_conference_children %}
+                    <a class="btn btn-lg btn-outline-primary" href="{{ upcoming_child| url }}"><i class="bx bx-chevron-right"></i>{{upcoming_child.title}}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+            <div class="col col-lg-9">
+                <h3 class="text-center">ICRAT Core Topics</h3>
+                <div class="border rounded-3 border-primary mb-4 mb-lg-5 mx-3 shadow-primary">
+                    <div class="row row-cols-1 row-cols-md-2 g-0">
+                        <div class="col d-flex align-items-center border-end-sm border-bottom p-2 border-primary">
+                            <i class="bx bx-math d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Advanced modeling and design methodologies</h3>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border-bottom p-2 border-primary">
+                            <i class="bx bx-globe d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Airline operations and quality of service</h3>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border-end-sm border-bottom p-2 border-primary">
+                            <i class="bx bxs-plane-take-off d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Airport &amp; Heliport design, management and operations</h3>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border-bottom p-2 border-primary">
+                            <i class="bx bxs-institution d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Air transportation governance, economics and policy</h3>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border-end-sm border-bottom p-2 border-primary">
+                            <i class="bx bx-line-chart d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Air transportation system performance measurement and management</h3>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border-bottom p-2 border-primary">
+                            <i class="bx bx-code-block d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Automation strategies and their application</h3>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border-end-sm border-bottom p-2 border-primary">
+                            <i class="bx bx-sitemap d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Decision support systems and human-machine collaboration</h3>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border-bottom p-2 border-primary">
+                            <i class="bx bxs-tree d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Environment and energy efficiency, climate change and impact</h3>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border-end-sm border-bottom p-2 border-primary">
+                            <i class="bx bx-navigation d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Information management, enhanced communication, surveillance and navigation</h3>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border-bottom p-2 border-primary">
+                            <i class="bx bxs-rocket d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Integration of high altitude and commercial space activities into air traffic management</h3>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border-end-sm border-bottom p-2 border-primary">
+                            <i class="bx bx-radar d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Network management, traffic flow optimization, system resilience and crisis management</h3>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border-bottom p-2 border-primary">
+                            <i class="bx bxs-city d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Drones and highly automated air vehicle integration</h3>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border-end-sm border-bottom p-2 border-primary">
+                            <i class="bx bx-error d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Safety, human performance and security</h3>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border-bottom p-2 border-primary">
+                            <i class="bx bx-bar-chart d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Socio-technical complexity and applications of data science in aviation</h3>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border-end-sm p-2 border-primary">
+                            <i class="bx bxs-plane-alt d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Trajectory optimization, trajectory and separation management</h3>
+                            </div>
+                        </div>
+                        <hr class="d-sm-none">
+                        <div class="col d-flex align-items-center p-2 border-primary">
+                            <i class="bx bx-receipt d-block text-primary" style="font-size: 2.5rem;"></i>
+                            <div class="ps-2 ms-1">
+                                <h3 class="h6 mb-0">Standards development and regulation</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row bg-faded-primary rounded-3 mx-5 mx-md-3 p-3 mt-4">
+            <div class="col">
+                <h3 class="text-center">Important Dates</h3>
+                <div class="container">
+                    <div class="row justify-content-evenly row-cols-md-3 text-white">
+                        <div class="col-md-4 col-lg-3 p-2">
+                            <div class="bg-info rounded-3 p-3 text-center h-100">
+                                <div class="border-bottom border-white border-2 pb-2 fs-lg fw-bold">May 20, 2022</div>
+                                <div class="fs-xl pt-3">Camera-ready Version Upload</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3 p-2">
+                            <div class="bg-info rounded-3 p-3 text-center h-100">
+                                <div class="border-bottom border-white border-2 pb-2 fs-lg fw-bold">Jun 19, 2022</div>
+                                <div class="fs-xl pt-3">Registration Deadline</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3 p-2">
+                            <div class="bg-info rounded-3 p-3 text-center h-100">
+                                <div class="border-bottom border-white border-2 pb-2 fs-lg fw-bold">Jun 19, 2022</div>
+                                <div class="fs-xl pt-3">Welcome Reception</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center my-3"><a href="#schedule" data-scroll><i class="bx bx-chevron-right"></i>See full conference schedule</a></p>
+            </div>
+        </div>
+
+        <div class="row mt-4 mt-xl-5">
+            <div class="accordion m-auto" id="accordionDefault" style="max-width: 950px;">
+                {% set gen_info_items = site.query('/info-tabs/').include_undiscoverable(True).all() %}
+
+                {% for gen_info_item in gen_info_items | sort(attribute='_id') %}
+
+                <!-- Item -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="heading-{{gen_info_item._id}}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{gen_info_item._id}}" aria-expanded="true" aria-controls="collapse-{{gen_info_item._id}}">
+                            {{ gen_info_item.title }}
+                        </button>
+                    </h3>
+                    <div class="accordion-collapse collapse" id="collapse-{{gen_info_item._id}}" aria-labelledby="heading-{{gen_info_item._id}}" data-bs-parent="#accordionDefault">
+                        <div class="accordion-body">
+                            {{ gen_info_item.body }}
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    <!--About ICRAT-->
+    <section class="bg-secondary py-5" id="about">
+        <div class="container py-2 py-md-4 py-lg-5">
+            {% set about_page = site.get('/about/') %}
+            <h2 class="h1 text-center mb-lg-4">{{about_page.title}}</h2>
+
+            {{ about_page.body }}
+
+            <h2 class="h2 text-center py-4 my-4">What Our Attendees Say</h2>
+            <div class="position-relative px-sm-5 mx-auto" style="max-width: 976px;">
+
+                <!-- Prev button -->
+                <button type="button" id="prev" class="btn btn-prev btn-icon btn-sm position-absolute top-50 translate-middle-y start-0 d-none d-sm-inline-flex mt-n4">
+                    <i class="bx bx-chevron-left"></i>
+                </button>
+
+                <!-- Next button -->
+                <button type="button" id="next" class="btn btn-next btn-icon btn-sm position-absolute top-50 translate-middle-y end-0 d-none d-sm-inline-flex mt-n4">
+                    <i class="bx bx-chevron-right"></i>
+                </button>
+
+                <!-- Slider -->
+                <div class="swiper swiper-nav-onhover pt-1 mx-md-2" data-swiper-options='{
+              "spaceBetween": 12,
+              "loop": true,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "clickable": true
+              },
+              "navigation": {
+                "prevEl": "#prev",
+                "nextEl": "#next"
+              }
+            }'>
+                    <div class="swiper-wrapper pt-4 pb-3">
+
+                        <!-- Item -->
+                        <div class="swiper-slide h-auto px-2">
+                            <figure class="card h-100 position-relative border-0 shadow-sm py-3 p-0 p-xxl-4 my-0">
+                    <span class="btn btn-icon btn-primary btn-lg shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4 ms-xxl-5">
+                      <i class="bx bxs-quote-left"></i>
+                    </span>
+                                <blockquote class="card-body mt-2 mb-2">
+                                    <p class="fs-lg mb-0">Dolor, a eget elementum, integer nulla volutpat, nunc, sit. Quam iaculis varius mauris magna sem. Egestas sed sed suscipit dolor faucibus dui imperdiet at eget. Tincidunt imperdiet quis hendrerit aliquam feugiat neque cras sed. Dictum quam integer volutpat tellus, faucibus platea. Pulvinar turpis proin faucibus at mauris. Sagittis gravida vitae porta enim, nulla arcu fermentum massa lobortis facilisis.</p>
+                                </blockquote>
+                                <figcaption class="card-footer d-flex align-items-center border-0 pt-0 mt-n2 mt-lg-0">
+                                    <img src="{{'static/assets/img/avatar/14.jpg' | url}}" width="60" class="rounded-circle" alt="Annette Black">
+                                    <div class="ps-3">
+                                        <h6 class="fw-semibold lh-base mb-0">Annette Black</h6>
+                                        <span class="fs-sm text-muted">QA Engineer in Company Name</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="swiper-slide h-auto px-2">
+                            <figure class="card h-100 position-relative border-0 shadow-sm py-3 p-0 p-xxl-4 my-0">
+                    <span class="btn btn-icon btn-primary btn-lg shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4 ms-xxl-5">
+                      <i class="bx bxs-quote-left"></i>
+                    </span>
+                                <blockquote class="card-body mt-2 mb-2">
+                                    <p class="fs-lg mb-0">Id nibh sed purus eu. Viverra eu sed quam pellentesque magna ac sit odio. Mi at interdum hendrerit neque vulputate semper vulputate. Et augue lacinia magna tempor blandit dui porttitor in senectus. Porttitor nulla in ac in quis. Et ultrices lacus, nunc at nulla eu sodales. At aliquam euismod est in praesent ornare etiam id.</p>
+                                </blockquote>
+                                <figcaption class="card-footer d-flex align-items-center border-0 pt-0 mt-n2 mt-lg-0">
+                                    <img src="{{'static/assets/img/avatar/11.jpg' | url}}" width="60" class="rounded-circle" alt="Jerome Bell">
+                                    <div class="ps-3">
+                                        <h6 class="fw-semibold lh-base mb-0">Jerome Bell</h6>
+                                        <span class="fs-sm text-muted">Co-founder of Lorem Company</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="swiper-slide h-auto px-2">
+                            <figure class="card h-100 position-relative border-0 shadow-sm py-3 p-0 p-xxl-4 my-0">
+                    <span class="btn btn-icon btn-primary btn-lg shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4 ms-xxl-5">
+                      <i class="bx bxs-quote-left"></i>
+                    </span>
+                                <blockquote class="card-body mt-2 mb-2">
+                                    <p class="fs-lg mb-0">Nec iaculis fermentum interdum habitasse feugiat massa id pellentesque. Ut porta gravida lobortis facilisis dui augue. Fringilla nunc porttitor eget dictum tempus. Lorem erat eu congue curabitur est. Pulvinar morbi pulvinar venenatis rhoncus egestas euismod massa mauris. Vestibulum nunc lectus auctor quis. Natoque lectus tortor lacus.</p>
+                                </blockquote>
+                                <figcaption class="card-footer d-flex align-items-center border-0 pt-0 mt-n2 mt-lg-0">
+                                    <img src="{{'static/assets/img/avatar/13.jpg' | url}}" width="60" class="rounded-circle" alt="Robert Fox">
+                                    <div class="ps-3">
+                                        <h6 class="fw-semibold lh-base mb-0">Robert Fox</h6>
+                                        <span class="fs-sm text-muted">CEO of Ipsum Company</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Schedule -->
+    <section class="container py-5" id="schedule">
+        <div class="row mt-xl-2 mb-xl-3 pb-3 py-md-4 py-lg-5">
+            <div class="col-12">
+                <h2 class="h1 text-center text-sm-start pb-2 pb-lg-0 mb-4 mb-lg-5">Schedule</h2>
+            </div>
+            <div class="col-lg-3 mb-4">
+
+                <!-- Nav tabs -->
+                <div class="nav flex-nowrap flex-lg-column nav-tabs" role="tablist" aria-orientation="vertical">
+                    <a href="#day-1" class="nav-link d-block w-100 rounded-3 p-3 p-xl-4 me-2 me-sm-3 me-lg-0 mb-lg-3 active" id="day-1-tab" data-bs-toggle="tab" role="tab" aria-controls="day-1" aria-selected="true">
+                        <div class="fs-4 fw-bold">Jun 19, 2022</div>
+                    </a>
+                    <a href="#day-2" class="nav-link d-block w-100 rounded-3 p-3 p-xl-4 mb-lg-3" id="day-2-tab" data-bs-toggle="tab" role="tab" aria-controls="day-2" aria-selected="false">
+                        <div class="fs-4 fw-bold">Jun 20, 2022</div>
+                    </a>
+                    <a href="#day-3" class="nav-link d-block w-100 rounded-3 p-3 p-xl-4 mb-lg-3" id="day-3-tab" data-bs-toggle="tab" role="tab" aria-controls="day-3" aria-selected="false">
+                        <div class="fs-4 fw-bold">Jun 21, 2022</div>
+                    </a>
+                    <a href="#day-4" class="nav-link d-block w-100 rounded-3 p-3 p-xl-4 mb-lg-3" id="day-4-tab" data-bs-toggle="tab" role="tab" aria-controls="day-4" aria-selected="false">
+                        <div class="fs-4 fw-bold">Jun 22, 2022</div>
+                    </a>
+                    <a href="#day-5" class="nav-link d-block w-100 rounded-3 p-3 p-xl-4 mb-lg-3" id="day-5-tab" data-bs-toggle="tab" role="tab" aria-controls="day-5" aria-selected="false">
+                        <div class="fs-4 fw-bold">Jun 23, 2022</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-8 offset-lg-1">
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+
+                    <!-- Day 1 schedule -->
+                    <div class="tab-pane fade show active" id="day-1" role="tabpanel" aria-labelledby="day-1-tab">
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">From 6:00 pm</div>
+                                    <p class="text-muted mb-0">Jun 19th</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="mb-0">Welcome Reception</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 schedule -->
+                    <div class="tab-pane fade" id="day-2" role="tabpanel" aria-labelledby="day-2-tab">
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">8:30 – 10:00 am</div>
+                                    <p class="text-muted mb-0">June 20th</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5>Opening Ceremony</h5>
+                                    <p class="mb-4">Nec, malesuada quisque lorem id amet posuere. Risus, elit, vel pharetra ac, dictum lorem nisl morbi. Lorem dui id aliquam eu feugiat arcu diam.</p>
+                                    <div class="row row-cols-1 row-cols-md-2 g-3">
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="{{'static/assets/img/avatar/01.jpg' | url}}" class="rounded-circle" width="48" alt="Jerome Bell">
+                                                <div class="ps-3">
+                                                    <h6 class="fw-semibold mb-1">Jerome Bell</h6>
+                                                    <p class="fs-sm text-muted mb-0">Strategic Advisor, Shopify</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="{{'static/assets/img/avatar/06.jpg' | url}}" class="rounded-circle" width="48" alt="Jenny Wilson">
+                                                <div class="ps-3">
+                                                    <h6 class="fw-semibold mb-1">Jenny Wilson</h6>
+                                                    <p class="fs-sm text-muted mb-0">UX Designer, Glassdoor</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="text-muted h5 mb-1">10:00 – 10:30 am</div>
+                                    <p class="text-muted mb-0">June 20th</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="text-muted mb-0">Coffee Break</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">10:00 – 11:30 am</div>
+                                    <p class="text-muted mb-0">June 20th</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="mb-0">Technical Sessions</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="text-muted h5 mb-1">11:30 am – 01:00 am</div>
+                                    <p class="text-muted mb-0">June 20th</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="text-muted mb-0">Lunch Break</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">1:00 – 2:30 pm</div>
+                                    <p class="text-muted mb-0">June 20th</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="mb-0">Technical Sessions</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="text-muted h5 mb-1">2:30 – 03:00 pm</div>
+                                    <p class="text-muted mb-0">June 20th</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="text-muted mb-0">Lunch Break</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">3:00 – 4:30 pm</div>
+                                    <p class="text-muted mb-0">June 20th</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="mb-0">Technical Sessions</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 schedule -->
+                    <div class="tab-pane fade" id="day-3" role="tabpanel" aria-labelledby="day-3-tab">
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">8:30 – 10:00 am</div>
+                                    <p class="text-muted mb-0">June 21st</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5>Plenary Session</h5>
+                                    <p class="mb-4">Nec, malesuada quisque lorem id amet posuere. Risus, elit, vel pharetra ac, dictum lorem nisl morbi. Lorem dui id aliquam eu feugiat arcu diam.</p>
+                                    <div class="row row-cols-1 row-cols-md-2 g-3">
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="assets/img/avatar/01.jpg" class="rounded-circle" width="48" alt="Jerome Bell">
+                                                <div class="ps-3">
+                                                    <h6 class="fw-semibold mb-1">Jerome Bell</h6>
+                                                    <p class="fs-sm text-muted mb-0">Strategic Advisor, Shopify</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="assets/img/avatar/06.jpg" class="rounded-circle" width="48" alt="Jenny Wilson">
+                                                <div class="ps-3">
+                                                    <h6 class="fw-semibold mb-1">Jenny Wilson</h6>
+                                                    <p class="fs-sm text-muted mb-0">UX Designer, Glassdoor</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="text-muted h5 mb-1">10:00 – 10:30 am</div>
+                                    <p class="text-muted mb-0">June 21st</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="text-muted mb-0">Coffee Break</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">10:00 – 11:30 am</div>
+                                    <p class="text-muted mb-0">June 21st</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="mb-0">Technical Sessions</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="text-muted h5 mb-1">11:30 am – 01:00 am</div>
+                                    <p class="text-muted mb-0">June 21st</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="text-muted mb-0">Lunch Break</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">1:00 – 4:30 pm</div>
+                                    <p class="text-muted mb-0">June 21st</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="mb-0">Student Activity</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 4 schedule -->
+                    <div class="tab-pane fade" id="day-4" role="tabpanel" aria-labelledby="day-4-tab">
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">8:30 – 10:00 am</div>
+                                    <p class="text-muted mb-0">June 22nd</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5>Plenary Session</h5>
+                                    <p class="mb-4">Nec, malesuada quisque lorem id amet posuere. Risus, elit, vel pharetra ac, dictum lorem nisl morbi. Lorem dui id aliquam eu feugiat arcu diam.</p>
+                                    <div class="row row-cols-1 row-cols-md-2 g-3">
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="{{'static/assets/img/avatar/01.jpg' | url}}" class="rounded-circle" width="48" alt="Jerome Bell">
+                                                <div class="ps-3">
+                                                    <h6 class="fw-semibold mb-1">Jerome Bell</h6>
+                                                    <p class="fs-sm text-muted mb-0">Strategic Advisor, Shopify</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="{{'static/assets/img/avatar/06.jpg' | url}}" class="rounded-circle" width="48" alt="Jenny Wilson">
+                                                <div class="ps-3">
+                                                    <h6 class="fw-semibold mb-1">Jenny Wilson</h6>
+                                                    <p class="fs-sm text-muted mb-0">UX Designer, Glassdoor</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="text-muted h5 mb-1">10:00 – 10:30 am</div>
+                                    <p class="text-muted mb-0">June 22nd</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="text-muted mb-0">Coffee Break</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">10:00 – 11:30 am</div>
+                                    <p class="text-muted mb-0">June 22nd</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="mb-0">Technical Sessions</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="text-muted h5 mb-1">11:30 am – 01:00 am</div>
+                                    <p class="text-muted mb-0">June 22nd</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="text-muted mb-0">Lunch Break</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">1:00 – 2:30 pm</div>
+                                    <p class="text-muted mb-0">June 22nd</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="mb-0">Technical Sessions</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="text-muted h5 mb-1">2:30 – 03:00 pm</div>
+                                    <p class="text-muted mb-0">June 22nd</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="text-muted mb-0">Lunch Break</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">3:00 – 4:30 pm</div>
+                                    <p class="text-muted mb-0">June 22nd</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="mb-0">Technical Sessions</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">From 8:00 pm</div>
+                                    <p class="text-muted mb-0">June 22nd</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="mb-0">Gala Dinner</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 5 schedule -->
+                    <div class="tab-pane fade" id="day-5" role="tabpanel" aria-labelledby="day-5-tab">
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">8:30 – 10:00 am</div>
+                                    <p class="text-muted mb-0">June 23rd</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5>Plenary Session</h5>
+                                    <p class="mb-4">Nec, malesuada quisque lorem id amet posuere. Risus, elit, vel pharetra ac, dictum lorem nisl morbi. Lorem dui id aliquam eu feugiat arcu diam.</p>
+                                    <div class="row row-cols-1 row-cols-md-2 g-3">
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="assets/img/avatar/01.jpg" class="rounded-circle" width="48" alt="Jerome Bell">
+                                                <div class="ps-3">
+                                                    <h6 class="fw-semibold mb-1">Jerome Bell</h6>
+                                                    <p class="fs-sm text-muted mb-0">Strategic Advisor, Shopify</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="assets/img/avatar/06.jpg" class="rounded-circle" width="48" alt="Jenny Wilson">
+                                                <div class="ps-3">
+                                                    <h6 class="fw-semibold mb-1">Jenny Wilson</h6>
+                                                    <p class="fs-sm text-muted mb-0">UX Designer, Glassdoor</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="text-muted h5 mb-1">10:00 – 10:30 am</div>
+                                    <p class="text-muted mb-0">June 23rd</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5 class="text-muted mb-0">Coffee Break</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom pb-4">
+                            <div class="row pb-1 pb-xl-3">
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <div class="h5 mb-1">10:00 – 11:30 am</div>
+                                    <p class="text-muted mb-0">June 23rd</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h5>Closing Session</h5>
+                                    <p class="mb-4">Nec, malesuada quisque lorem id amet posuere. Risus, elit, vel pharetra ac, dictum lorem nisl morbi. Lorem dui id aliquam eu feugiat arcu diam.</p>
+                                    <div class="row row-cols-1 row-cols-md-2 g-3">
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="assets/img/avatar/01.jpg" class="rounded-circle" width="48" alt="Jerome Bell">
+                                                <div class="ps-3">
+                                                    <h6 class="fw-semibold mb-1">Jerome Bell</h6>
+                                                    <p class="fs-sm text-muted mb-0">Strategic Advisor, Shopify</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="assets/img/avatar/06.jpg" class="rounded-circle" width="48" alt="Jenny Wilson">
+                                                <div class="ps-3">
+                                                    <h6 class="fw-semibold mb-1">Jenny Wilson</h6>
+                                                    <p class="fs-sm text-muted mb-0">UX Designer, Glassdoor</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials slider -->
+    <section class="bg-secondary py-5" id="committee">
+        <div class="container py-2 py-md-4 py-lg-5">
+            <h2 class="h1 text-center">2022 ICRAT Conference Committee</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-2 mt-lg-4">
+
+                <!-- Item -->
+                <div class="col">
+                    <div class="card border-0 bg-transparent">
+                        <img src="{{'static/assets/img/team/24.jpg' | url}}" class="rounded-3" alt="Eric Neiderman">
+                        <div class="card-body text-center p-3">
+                            <h3 class="fs-lg fw-semibold pt-1 mb-1">Eric Neiderman</h3>
+                            <h4 class="fs-6 fw-lighter mb-1">U.S. General Conference Chair</h4>
+                            <p class="fs-sm mb-0">Federal Aviation Administration</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="col">
+                    <div class="card border-0 bg-transparent">
+                        <img src="{{'static/assets/img/team/25.jpg' | url}}" class="rounded-3" alt="Marc Bourgois">
+                        <div class="card-body text-center p-3">
+                            <h3 class="fs-lg fw-semibold pt-1 mb-1">Marc Bourgois</h3>
+                            <h4 class="fs-6 fw-lighter mb-1">Europe General Conference Chair</h4>
+                            <p class="fs-sm mb-0">EUROCONTROL</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="col">
+                    <div class="card border-0 bg-transparent">
+                        <img src="{{'static/assets/img/team/26.jpg' | url}}" class="rounded-3" alt="Dave Lovell">
+                        <div class="card-body text-center p-3">
+                            <h3 class="fs-lg fw-semibold pt-1 mb-1">Dave Lovell</h3>
+                            <h4 class="fs-6 fw-lighter mb-1">U.S. Program Chair</h4>
+                            <p class="fs-sm mb-0">University of Maryland</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="col">
+                    <div class="card border-0 bg-transparent">
+                        <img src="{{'static/assets/img/team/27.jpg' | url}}" class="rounded-3" alt="Hartmut Fricke">
+                        <div class="card-body text-center p-3">
+                            <h3 class="fs-lg fw-semibold pt-1 mb-1">Hartmut Fricke</h3>
+                            <h4 class="fs-6 fw-lighter mb-1">Europe Program Chair</h4>
+                            <p class="fs-sm mb-0">Technische Universität Dresden</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="col">
+                    <div class="card border-0 bg-transparent">
+                        <img src="{{'static/assets/img/team/28.jpg' | url}}" class="rounded-3" alt="Seth Young">
+                        <div class="card-body text-center p-3">
+                            <h3 class="fs-lg fw-semibold pt-1 mb-1">Seth Young</h3>
+                            <h4 class="fs-6 fw-lighter mb-1">Doctoral Chair</h4>
+                            <p class="fs-sm mb-0">Ohio State University</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="col">
+                    <div class="card border-0 bg-transparent">
+                        <img src="{{'static/assets/img/team/29.jpg' | url}}" class="rounded-3" alt="Damian Rivas">
+                        <div class="card-body text-center p-3">
+                            <h3 class="fs-lg fw-semibold pt-1 mb-1">Damian Rivas</h3>
+                            <h4 class="fs-6 fw-lighter mb-1">Tutorial Chair</h4>
+                            <p class="fs-sm mb-0">Universidad de Sevilla</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item -->
+                <div class="col">
+                    <div class="card border-0 bg-transparent">
+                        <img src="{{'static/assets/img/team/30.jpg' | url}}" class="rounded-3" alt="Yu Zhang">
+                        <div class="card-body text-center p-3">
+                            <h3 class="fs-lg fw-semibold pt-1 mb-1">Yu Zhang</h3>
+                            <h4 class="fs-6 fw-lighter mb-1">Local Arrangements Chair</h4>
+                            <p class="fs-sm mb-0">University of South Florida</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <h3 class="text-center my-5 ">Program Committee</h3>
+                <div class="col-lg">
+                    <ul class="my-md-0 my-sm-0">
+                        <li>Sameer Alam, Nanyang Technological University, Singapore</li>
+                        <li>Kenneth Allendoerfer, Federal Aviation Administration</li>
+                        <li>Hamsa Balakrishnan, Massachusetts Institute of Technology</li>
+                        <li>Michael Ball, University of Maryland</li>
+                        <li>Lorenzo Castelli, Università degli Studi di Trieste</li>
+                        <li>Andrew Churchill, Mosaic ATM</li>
+                        <li>Daniel Delahaye, Ecole Nationale de l’Aviation Civile</li>
+                        <li>Luis Delgado, University of Westminster</li>
+                        <li>Nicolas Durand, Ecole Nationale de l’Aviation Civile</li>
+                        <li>Joost Ellerbroek, Delft University of Technology</li>
+                        <li>Miquel Angel Piera Eroles, Universitat Autònoma de Barcelona</li>
+                        <li>Carla Hackworth, Federal Aviation Administration</li>
+                        <li>Mark Hansen, University of California, Berkeley</li>
+                        <li>Peter Hecker, Technical University of Braunschweig</li>
+                        <li>Bob Hoffman, Metron Aviation</li>
+                        <li>Gokhan Inhalan, Istanbul Technical University</li>
+                        <li>Kurtulus Izzetoglu, Drexel University</li>
+                        <li>Chris Johnson, University of Glasgow</li>
+                        <li>James Jones, MIT Lincoln Labs</li>
+                        <li>Radosav Jovanovic, University of Belgrade</li>
+                        <li>Yoon Jung, National Aeronautics and Space Administration</li>
+                        <li>Amy Kim, University of Alberta</li>
+                        <li>Xavier Lopez, Boeing</li>
+                        <li>Sandy Lozito, National Aeronautics and Space Administration</li>
+                    </ul>
+                </div>
+                <div class="col-lg">
+                    <ul>
+                        <li>Guglielmo Lulli, Università degli Studi di Milano-Bicocca</li>
+                        <li>Jonas Lundberg, Linköping University</li>
+                        <li>Lothar Meyer, LVF</li>
+                        <li>Max Mulder, Delft University of Technology</li>
+                        <li>Joseph Post, Federal Aviation Administration</li>
+                        <li>Xavier Prats, Universitat Politécnica de Catalunya</li>
+                        <li>Jasenka Rakas, University of California, Berkeley</li>
+                        <li>Jose Ramasco, Institute for Cross-Disciplinary Physics and Complex Systems</li>
+                        <li>Andrea Ranieri, SESAR Joint Undertaking</li>
+                        <li>Megan Ryerson, University of Pennsylvania</li>
+                        <li>Dirk Schaefer, EUROCONTROL</li>
+                        <li>Sherri Shearon, Federal Aviation Administration</li>
+                        <li>Lance Sherry, George Mason University</li>
+                        <li>John Shortle, George Mason University</li>
+                        <li>Senay Solak, University of Massachusetts</li>
+                        <li>Banavar Sridhar, National Aeronautics and Space Administration </li>
+                        <li>Sybert Stroeve, Netherlands Aerospace Centre</li>
+                        <li>Dengfeng Sun, Purdue University</li>
+                        <li>Xiaoqian Sun, Beihang University </li>
+                        <li>Pernilla Ulfvengren, KTH Royal Institute of Technology</li>
+                        <li>Thomas Vossen, University of Colorado</li>
+                        <li>Sebastian Wandelt, Humbolt Universitat zu Berlin</li>
+                        <li>Yanjung Wang, Nanjing University of Aeronautics and Astronautics</li>
+                        <li>Amber Woodburn, The Ohio State University</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="container py-5" id="venue">
+        <div class="row mt-lg-3 pt-1 pt-md-4 pt-lg-5">
+            <div class="col-xl-3 col-md-4 text-center text-md-start">
+                <h3 class="h4">Venue</h3>
+                <h2 class="h1 mb-4">University of South Florida</h2>
+                <div class="d-block">
+                    <a href="hotel.html" class="btn btn-primary mb-2">Hotel Information</a>
+                    <a href="area.html" class="btn btn-primary mb-2">Tampa Area Information</a>
+                </div>
+            </div>
+            <div class="col-xl-9 col-md-8">
+                <img src="{{'static/img/USF-COE.jpg' | url}}" class="rounded-3" width="952" alt="Venue">
+            </div>
+        </div>
+        <div class="row mb-lg-3 pb-1 pb-md-4 pb-lg-5 mt-4 mt-sm-n5">
+            <div class="col-lg-4 col-md-5 offset-md-6 offset-lg-7 mt-md-n5">
+                <div class="gallery mt-md-n4 mx-auto" style="max-width: 416px;">
+                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.7920199369673!2d-82.41036808457079!3d28.061374316450543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c7c0e7749c9d%3A0x940921d6d9768689!2sUSF%20C.W.%20Bill%20Young%20Hall%20ROTC%20Building!5e0!3m2!1sde!2sde!4v1652968267752!5m2!1sde!2sde" data-iframe="true" class="gallery-item rounded-2" data-sub-html='<h6 class="fs-sm text-light">University of South Florida, FL, USA</h6>'>
+                        <img src="{{'static/img/usf-map.png' | url}}" class="" alt="Map preview">
+                        <div class="gallery-item-caption fs-sm fw-medium">University of South Florida, FL, USA</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+{% endblock %}
