@@ -1,4 +1,4 @@
-_model: page
+_model: previous_conference
 ---
 title: 6th International Conference on Research in Air Transportation
 ---
@@ -19,3 +19,7 @@ ICRAT 2014 <br>
 * [Henk Blom, National Aerospace Laboratory (the Netherlands) and TU Delft - "In search of positive emergent behaviour of air traffic"](./Keynote%20ICRAT2014_In_searchU5.pdf)
 * Marko Hrastovec - "Machine Learning Model for Aircraft Performances
 
+---
+end_date: 2014-05-30
+---
+start_date: 2014-05-26

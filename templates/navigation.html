@@ -4,8 +4,8 @@
 <!-- Navbar -->
 <header class="header navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
     <div class="container px-3">
-        <a href="index.html" class="navbar-brand pe-3">
-            <img src="{{'static/img/header-globe.png' | url}}" width="47" alt="ICRAT">
+        <a href="{{'/' | url }}" class="navbar-brand pe-3">
+            <img src="{{'/static/img/header-globe.png' | url}}" width="47" alt="ICRAT">
             ICRAT
         </a>
         <div id="navbarNav" class="offcanvas offcanvas-end">
@@ -34,11 +34,10 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Previous Conferences</a>
 
                         <ul class="dropdown-menu">
-
                         {% set previous_conferences = site.get('/previous-conferences/') %}
-                        {% for child in previous_conferences.children recursive %}
+                        {% for child in previous_conferences.children | sort(attribute='start_date', reverse=True) %}
                         <li>
-                            <a href="{{ child | url}}" class="dropdown-item">{{ child.title }}</a>
+                            <a href="{{ child | url}}" class="dropdown-item">ICRAT {{child.start_date.year}} - {{ child.title[:child.title.find(' ')] }} International Conference</a>
                          </li>
                         {% endfor %}
                         <li><span class="dropdown-item disabled">ICRAT 2004 - 1st International Conference</span></li>
@@ -59,92 +58,3 @@
     </div>
 </header>
 
-
-
-
-
-<!--nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{'/'|url}}" style="font-size: 14px!important;">Home</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-               
-                <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Upcoming Conference <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-
-                    <li>
-                    <a href="{{ '/upcoming-conference'|url }}">Conference Information</a>
-                    </li>
-
-                    <li>
-                    <a href="{{ '/upcoming-conference/registration/'|url }}">Registration</a>
-                    </li>
-
-                    <li>
-                    <a href="{{ '/upcoming-conference/hotel/'|url }}">Hotel Information</a>
-                    </li>
-
-                    <li>
-                    <a href="{{ '/upcoming-conference/local-attractions/'|url }}">Tampa Area Local Attractions</a>
-                    </li>
-
-                    <li>
-                    <a href="{{ '/upcoming-conference/sponsorship'|url }}">Sponsorship Opportunities</a>
-                    </li>
-
-                    <li>
-                    <a href="{{ '/upcoming-conference/committee-members' | url }}"> Conference Committee</a>
-                    </li>
-
-                    <li>
-                    <a href="{{ '/upcoming-conference/call-for-papers'|url }}">Call for Papers</a>
-                    </li>
-                    
-                    <li>
-                    <a href="{{ '/upcoming-conference/call-for-papers/ICRAT2022_Call_for_Papers.pdf'|url }}">Call for Papers (PDF)</a>
-                    </li>
-                    <li>
-                    <a href="{{ '/upcoming-conference/call-for-papers/ICRAT2022_regular_paper_template.docx'|url }}"/>Regular Paper Template (updated 8-Feb-2022)</a>
-                    </li>
-                    
-                    <li>
-                    <a href="{{ '/upcoming-conference/call-for-papers/ICRAT2022_doctoral_symposium_template.docx'|url }}">Doctorial Symposium Template (updated 27-Jan-2022)</a>
-                    </li>
-
-                    <a href="{{ '/upcoming-conference/papers/Abstracts_ICRAT2020.pdf' | url }}">2020 ICRAT Book of Abstracts</a>
-                    </li>
-
-                    <li>
-                    <a href="{{ '/upcoming-conference/papers'|url }}">2020 Presentations and Technical Papers</a>
-                    </li>
-                    
-                    <li>
-                    <a href="https://easychair.org/conferences/?conf=icrat2020">EasyChair Paper Submissions</a>
-                    </li>
-                    
-                           
-                    </ul>
-                </li>
-
-                <li>
-                <a href="{{'/upcoming-conference'|url}}">Upcoming Conference</a>
-                </li>
-
-
-                <li>
-                <a href="{{'/previous-conferences'|url}}">Previous Conferences</a>
-                </li>
-               
-            </ul>
-        </div>
-        </div>
-    </nav-->

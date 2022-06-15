@@ -1,6 +1,6 @@
-_model: page
+_model: previous_conference
 ---
-title: 2018 International Conference on Research in Air Transportation
+title: 8th International Conference on Research in Air Transportation
 ---
 body:
 
@@ -27,3 +27,7 @@ Castelldefels, Catalonia - Spain<br/>
 <img src="2018_boeing_sponsor.png" class="img-responsive"/>
 </div>
 
+---
+end_date: 2018-06-29
+---
+start_date: 2018-06-26

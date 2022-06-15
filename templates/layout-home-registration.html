@@ -11,9 +11,9 @@
         <div class="row g-0">
             <div class="col-xl-7 col-lg-6 pe-lg-5">
                 <div class="d-flex h-100 pe-xl-4">
-                    <img src="{{'static/img/banner-optimised-operational-performance.jpg' | url}}" style="object-fit: cover; filter: brightness(80%)" alt="welcome banner">
+                    <img src="{{'/static/img/banner-optimised-operational-performance.jpg' | url}}" style="object-fit: cover; filter: brightness(80%)" alt="welcome banner">
                     <!-- <video class="w-100" autoplay muted loop style="object-fit: cover;">
-                        <source src="{{'static/assets/img/landing/conference/hero-video.mp4' | url}}" type="video/mp4">
+                        <source src="{{'/static/assets/img/landing/conference/hero-video.mp4' | url}}" type="video/mp4">
                     </video> -->
                 </div>
             </div>
@@ -76,19 +76,19 @@
 
                     <!-- Item -->
                     <div class="swiper-slide">
-                        <img src="{{'static/img/ec-mono-white.png' | url}}" class="d-block py-3 mx-auto" width="100" alt="EUROCONTROL">
+                        <img src="{{'/static/img/ec-mono-white.png' | url}}" class="d-block py-3 mx-auto" width="100" alt="EUROCONTROL">
                     </div>
 
                     <!-- Item -->
                     <div class="swiper-slide">
-                        <img src="{{'static/img/faa.png' | url}}" class="d-block py-3 mx-auto" width="100" alt="Federal Aviation Administration">
+                        <img src="{{'/static/img/faa.png' | url}}" class="d-block py-3 mx-auto" width="100" alt="Federal Aviation Administration">
                     </div>
 
                     {% for sponsor in sponsors %}
 
                     <!-- Item -->
                     <div class="swiper-slide">
-                        <img src="{{'static/' + sponsor['small_logo'] | url}}" class="d-block py-3 mx-auto" width="154" alt="{{sponsor.alt}}">
+                        <img src="{{'/static/' + sponsor['small_logo'] | url}}" class="d-block py-3 mx-auto" width="154" alt="{{sponsor.alt}}">
                     </div>
 
                     {% endfor %}
@@ -329,7 +329,7 @@
                                     <p class="fs-lg mb-0">Dolor, a eget elementum, integer nulla volutpat, nunc, sit. Quam iaculis varius mauris magna sem. Egestas sed sed suscipit dolor faucibus dui imperdiet at eget. Tincidunt imperdiet quis hendrerit aliquam feugiat neque cras sed. Dictum quam integer volutpat tellus, faucibus platea. Pulvinar turpis proin faucibus at mauris. Sagittis gravida vitae porta enim, nulla arcu fermentum massa lobortis facilisis.</p>
                                 </blockquote>
                                 <figcaption class="card-footer d-flex align-items-center border-0 pt-0 mt-n2 mt-lg-0">
-                                    <img src="{{'static/assets/img/avatar/14.jpg' | url}}" width="60" class="rounded-circle" alt="Annette Black">
+                                    <img src="{{'/static/assets/img/avatar/14.jpg' | url}}" width="60" class="rounded-circle" alt="Annette Black">
                                     <div class="ps-3">
                                         <h6 class="fw-semibold lh-base mb-0">Annette Black</h6>
                                         <span class="fs-sm text-muted">QA Engineer in Company Name</span>
@@ -348,7 +348,7 @@
                                     <p class="fs-lg mb-0">Id nibh sed purus eu. Viverra eu sed quam pellentesque magna ac sit odio. Mi at interdum hendrerit neque vulputate semper vulputate. Et augue lacinia magna tempor blandit dui porttitor in senectus. Porttitor nulla in ac in quis. Et ultrices lacus, nunc at nulla eu sodales. At aliquam euismod est in praesent ornare etiam id.</p>
                                 </blockquote>
                                 <figcaption class="card-footer d-flex align-items-center border-0 pt-0 mt-n2 mt-lg-0">
-                                    <img src="{{'static/assets/img/avatar/11.jpg' | url}}" width="60" class="rounded-circle" alt="Jerome Bell">
+                                    <img src="{{'/static/assets/img/avatar/11.jpg' | url}}" width="60" class="rounded-circle" alt="Jerome Bell">
                                     <div class="ps-3">
                                         <h6 class="fw-semibold lh-base mb-0">Jerome Bell</h6>
                                         <span class="fs-sm text-muted">Co-founder of Lorem Company</span>
@@ -367,7 +367,7 @@
                                     <p class="fs-lg mb-0">Nec iaculis fermentum interdum habitasse feugiat massa id pellentesque. Ut porta gravida lobortis facilisis dui augue. Fringilla nunc porttitor eget dictum tempus. Lorem erat eu congue curabitur est. Pulvinar morbi pulvinar venenatis rhoncus egestas euismod massa mauris. Vestibulum nunc lectus auctor quis. Natoque lectus tortor lacus.</p>
                                 </blockquote>
                                 <figcaption class="card-footer d-flex align-items-center border-0 pt-0 mt-n2 mt-lg-0">
-                                    <img src="{{'static/assets/img/avatar/13.jpg' | url}}" width="60" class="rounded-circle" alt="Robert Fox">
+                                    <img src="{{'/static/assets/img/avatar/13.jpg' | url}}" width="60" class="rounded-circle" alt="Robert Fox">
                                     <div class="ps-3">
                                         <h6 class="fw-semibold lh-base mb-0">Robert Fox</h6>
                                         <span class="fs-sm text-muted">CEO of Ipsum Company</span>
@@ -446,7 +446,7 @@
                                     <div class="row row-cols-1 row-cols-md-2 g-3">
                                         <div class="col">
                                             <div class="d-flex align-items-center">
-                                                <img src="{{'static/assets/img/avatar/01.jpg' | url}}" class="rounded-circle" width="48" alt="Jerome Bell">
+                                                <img src="{{'/static/assets/img/avatar/01.jpg' | url}}" class="rounded-circle" width="48" alt="Jerome Bell">
                                                 <div class="ps-3">
                                                     <h6 class="fw-semibold mb-1">Jerome Bell</h6>
                                                     <p class="fs-sm text-muted mb-0">Strategic Advisor, Shopify</p>
@@ -455,7 +455,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="d-flex align-items-center">
-                                                <img src="{{'static/assets/img/avatar/06.jpg' | url}}" class="rounded-circle" width="48" alt="Jenny Wilson">
+                                                <img src="{{'/static/assets/img/avatar/06.jpg' | url}}" class="rounded-circle" width="48" alt="Jenny Wilson">
                                                 <div class="ps-3">
                                                     <h6 class="fw-semibold mb-1">Jenny Wilson</h6>
                                                     <p class="fs-sm text-muted mb-0">UX Designer, Glassdoor</p>
@@ -628,7 +628,7 @@
                                     <div class="row row-cols-1 row-cols-md-2 g-3">
                                         <div class="col">
                                             <div class="d-flex align-items-center">
-                                                <img src="{{'static/assets/img/avatar/01.jpg' | url}}" class="rounded-circle" width="48" alt="Jerome Bell">
+                                                <img src="{{'/static/assets/img/avatar/01.jpg' | url}}" class="rounded-circle" width="48" alt="Jerome Bell">
                                                 <div class="ps-3">
                                                     <h6 class="fw-semibold mb-1">Jerome Bell</h6>
                                                     <p class="fs-sm text-muted mb-0">Strategic Advisor, Shopify</p>
@@ -637,7 +637,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="d-flex align-items-center">
-                                                <img src="{{'static/assets/img/avatar/06.jpg' | url}}" class="rounded-circle" width="48" alt="Jenny Wilson">
+                                                <img src="{{'/static/assets/img/avatar/06.jpg' | url}}" class="rounded-circle" width="48" alt="Jenny Wilson">
                                                 <div class="ps-3">
                                                     <h6 class="fw-semibold mb-1">Jenny Wilson</h6>
                                                     <p class="fs-sm text-muted mb-0">UX Designer, Glassdoor</p>
@@ -821,7 +821,7 @@
                 <!-- Item -->
                 <div class="col">
                     <div class="card border-0 bg-transparent">
-                        <img src="{{'static/assets/img/team/24.jpg' | url}}" class="rounded-3" alt="Eric Neiderman">
+                        <!--img src="{{'/static/assets/img/team/24.jpg' | url}}" class="rounded-3" alt="Eric Neiderman"-->
                         <div class="card-body text-center p-3">
                             <h3 class="fs-lg fw-semibold pt-1 mb-1">Eric Neiderman</h3>
                             <h4 class="fs-6 fw-lighter mb-1">U.S. General Conference Chair</h4>
@@ -833,7 +833,7 @@
                 <!-- Item -->
                 <div class="col">
                     <div class="card border-0 bg-transparent">
-                        <img src="{{'static/assets/img/team/25.jpg' | url}}" class="rounded-3" alt="Marc Bourgois">
+                        <!--img src="{{'/static/assets/img/team/25.jpg' | url}}" class="rounded-3" alt="Marc Bourgois"-->
                         <div class="card-body text-center p-3">
                             <h3 class="fs-lg fw-semibold pt-1 mb-1">Marc Bourgois</h3>
                             <h4 class="fs-6 fw-lighter mb-1">Europe General Conference Chair</h4>
@@ -845,7 +845,7 @@
                 <!-- Item -->
                 <div class="col">
                     <div class="card border-0 bg-transparent">
-                        <img src="{{'static/assets/img/team/26.jpg' | url}}" class="rounded-3" alt="Dave Lovell">
+                        <!--img src="{{'/static/assets/img/team/26.jpg' | url}}" class="rounded-3" alt="Dave Lovell"-->
                         <div class="card-body text-center p-3">
                             <h3 class="fs-lg fw-semibold pt-1 mb-1">Dave Lovell</h3>
                             <h4 class="fs-6 fw-lighter mb-1">U.S. Program Chair</h4>
@@ -857,7 +857,7 @@
                 <!-- Item -->
                 <div class="col">
                     <div class="card border-0 bg-transparent">
-                        <img src="{{'static/assets/img/team/27.jpg' | url}}" class="rounded-3" alt="Hartmut Fricke">
+                        <!--img src="{{'/static/assets/img/team/27.jpg' | url}}" class="rounded-3" alt="Hartmut Fricke"-->
                         <div class="card-body text-center p-3">
                             <h3 class="fs-lg fw-semibold pt-1 mb-1">Hartmut Fricke</h3>
                             <h4 class="fs-6 fw-lighter mb-1">Europe Program Chair</h4>
@@ -869,7 +869,7 @@
                 <!-- Item -->
                 <div class="col">
                     <div class="card border-0 bg-transparent">
-                        <img src="{{'static/assets/img/team/28.jpg' | url}}" class="rounded-3" alt="Seth Young">
+                        <!--img src="{{'/static/assets/img/team/28.jpg' | url}}" class="rounded-3" alt="Seth Young"-->
                         <div class="card-body text-center p-3">
                             <h3 class="fs-lg fw-semibold pt-1 mb-1">Seth Young</h3>
                             <h4 class="fs-6 fw-lighter mb-1">Doctoral Chair</h4>
@@ -881,7 +881,7 @@
                 <!-- Item -->
                 <div class="col">
                     <div class="card border-0 bg-transparent">
-                        <img src="{{'static/assets/img/team/29.jpg' | url}}" class="rounded-3" alt="Damian Rivas">
+                        <!--img src="{{'/static/assets/img/team/29.jpg' | url}}" class="rounded-3" alt="Damian Rivas"-->
                         <div class="card-body text-center p-3">
                             <h3 class="fs-lg fw-semibold pt-1 mb-1">Damian Rivas</h3>
                             <h4 class="fs-6 fw-lighter mb-1">Tutorial Chair</h4>
@@ -893,7 +893,7 @@
                 <!-- Item -->
                 <div class="col">
                     <div class="card border-0 bg-transparent">
-                        <img src="{{'static/assets/img/team/30.jpg' | url}}" class="rounded-3" alt="Yu Zhang">
+                        <!--img src="{{'/static/assets/img/team/30.jpg' | url}}" class="rounded-3" alt="Yu Zhang"-->
                         <div class="card-body text-center p-3">
                             <h3 class="fs-lg fw-semibold pt-1 mb-1">Yu Zhang</h3>
                             <h4 class="fs-6 fw-lighter mb-1">Local Arrangements Chair</h4>
@@ -977,14 +977,14 @@
                 </div>
             </div>
             <div class="col-xl-9 col-md-8">
-                <img src="{{'static/img/USF-COE.jpg' | url}}" class="rounded-3" width="952" alt="Venue">
+                <img src="{{'/static/img/USF-COE.jpg' | url}}" class="rounded-3" width="952" alt="Venue">
             </div>
         </div>
         <div class="row mb-lg-3 pb-1 pb-md-4 pb-lg-5 mt-4 mt-sm-n5">
             <div class="col-lg-4 col-md-5 offset-md-6 offset-lg-7 mt-md-n5">
                 <div class="gallery mt-md-n4 mx-auto" style="max-width: 416px;">
                     <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.7920199369673!2d-82.41036808457079!3d28.061374316450543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c7c0e7749c9d%3A0x940921d6d9768689!2sUSF%20C.W.%20Bill%20Young%20Hall%20ROTC%20Building!5e0!3m2!1sde!2sde!4v1652968267752!5m2!1sde!2sde" data-iframe="true" class="gallery-item rounded-2" data-sub-html='<h6 class="fs-sm text-light">University of South Florida, FL, USA</h6>'>
-                        <img src="{{'static/img/usf-map.png' | url}}" class="" alt="Map preview">
+                        <img src="{{'/static/img/usf-map.png' | url}}" class="" alt="Map preview">
                         <div class="gallery-item-caption fs-sm fw-medium">University of South Florida, FL, USA</div>
                     </a>
                 </div>

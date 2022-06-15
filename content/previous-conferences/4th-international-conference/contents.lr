@@ -1,4 +1,4 @@
-_model: page
+_model: previous_conference
 ---
 title: 4th International Conference on Research and Air Transportation
 ---
@@ -13,3 +13,5 @@ ICRAT 2010 <br>
 * [Proceedings](./icrat_2010_proceedings.pdf)
 * [Abstracts](./icrat_2010_book_of_abstracts.pdf)
 * [Tutorials and Papers](./papers/)
+---
+start_date: 2010-06-01

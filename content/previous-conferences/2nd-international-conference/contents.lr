@@ -1,4 +1,4 @@
-_model: page
+_model: previous_conference
 ---
 title: 2nd International Conference on Research and Air Transportation
 ---
@@ -8,3 +8,5 @@ ICRAT 2006 <br>
 
 <a href="icrat_2006_proceedings.pdf" target="_blank"> Proceedings </a>
 
+---
+start_date: 2006-06-19

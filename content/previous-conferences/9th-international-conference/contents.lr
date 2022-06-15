@@ -1,4 +1,4 @@
-_model: page
+_model: previous_conference
 ---
 title: 9th International Conference on Research in Air Transportation
 ---
@@ -20,3 +20,5 @@ Additional conference information is provided at the links below:
 * [2020 ICRAT Agenda](./agenda/)
 * [2020 ICRAT Book of Abstracts](./papers/Abstracts_ICRAT2020.pdf)
 * [2020 ICRAT Presentations and Technical Papers](./papers/)
+---
+start_date: 2020-09-15
