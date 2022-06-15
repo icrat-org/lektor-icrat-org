@@ -4,5 +4,5 @@ name = ICRAT
 [servers.ghpages]
 target = ghpages://icrat-org/icrat-org.github.io?cname=www.icrat.org
 
-# [packages]
-# lektor-conference-template-functions = 0.1.3
+[packages]
+lektor-conference-template-functions = 0.1.4
