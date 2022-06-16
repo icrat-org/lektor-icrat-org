@@ -22,10 +22,9 @@
 
 {% for pidx, paper_data in enumerate(all_papers_attach) %}
 {% set primary_alternate = ((pidx % 2) == 0) %}
-{% set is_accepted_papers = 'accepted' in paper_data.table_title.lower() %}
 {% set papers_attach = paper_data.table_data %}
 
-{% if is_accepted_papers %}
+{% if paper_data.is_organized %}
 
     <div class="{% if primary_alternate %} bg-secondary {%endif%}">
     <section class="container mb-lg-4 py-5">
