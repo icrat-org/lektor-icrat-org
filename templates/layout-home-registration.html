@@ -26,8 +26,8 @@
                         <div class="fs-xl">{{this.next_location}}</div>
                     </div>
                     <div class="d-flex flex-column justify-content-center justify-content-lg-start py-4 py-lg-5">
-                        <a href="registration.html" class="btn btn-primary shadow-primary btn-lg me-sm-3 me-xl-4 mb-3">Registration</a>
-                        <a href="sponsoring-opportunities.html" class="btn btn-primary shadow-primary btn-lg me-sm-3 me-xl-4 mb-3">Sponsoring Opportunities</a>
+                        <a href="{{'/upcoming-conference/registration/' | url}}" class="btn btn-primary shadow-primary btn-lg me-sm-3 me-xl-4 mb-3">Registration</a>
+                        <a href="{{'/upcoming-conference/sponsorship/' | url }}" class="btn btn-primary shadow-primary btn-lg me-sm-3 me-xl-4 mb-3">Sponsoring Opportunities</a>
                         <a href="https://easychair.org/conferences/?conf=icrat2022" class="btn btn-outline-primary btn-lg me-sm-3 me-xl-4 mb-3">Easychair Page</a>
                     </div>
                 </div>
@@ -47,58 +47,7 @@
 
     <!-- Sponsors -->
     <section class="bg-info py-5">
-        <div class="container pt-1 pt-md-2 pb-lg-2 pt-lg-4">
-            <h2 class="h3 text-light text-center text-lg-start mb-4 mb-lg-5">Sponsors:</h2>
-            <div class="swiper ms-xxl-n5 me-xxl-n4" data-swiper-options='{
-            "slidesPerView": 2,
-            "spaceBetween": 24,
-            "pagination": {
-              "el": ".swiper-pagination",
-              "clickable": true
-            },
-            "breakpoints": {
-              "500": {
-                "slidesPerView": 3
-              },
-              "650": {
-                "slidesPerView": 4
-              },
-              "900": {
-                "slidesPerView": 5
-              },
-              "1100": {
-                "slidesPerView": 6
-              }
-            }
-          }'>
-                {% set sponsors = sponsors_csv(year='2022') %}
-                <div class="swiper-wrapper align-items-center">
-
-                    <!-- Item -->
-                    <div class="swiper-slide">
-                        <img src="{{'/static/img/ec-mono-white.png' | url}}" class="d-block py-3 mx-auto" width="100" alt="EUROCONTROL">
-                    </div>
-
-                    <!-- Item -->
-                    <div class="swiper-slide">
-                        <img src="{{'/static/img/faa.png' | url}}" class="d-block py-3 mx-auto" width="100" alt="Federal Aviation Administration">
-                    </div>
-
-                    {% for sponsor in sponsors %}
-
-                    <!-- Item -->
-                    <div class="swiper-slide">
-                        <img src="{{('/static/' + sponsor['small_logo']) | url}}" class="d-block py-3 mx-auto" width="154" alt="{{sponsor.alt}}">
-                    </div>
-
-                    {% endfor %}
-
-                </div>
-
-                <!-- Pagination (bullets) -->
-                <div class="swiper-pagination dark-mode position-relative pt-2 mt-4"></div>
-            </div>
-        </div>
+    {% include "sponsors.html" %}
     </section>
 
     <!-- Upcoming conference -->
@@ -228,34 +177,8 @@
             </div>
         </div>
 
-        <div class="row bg-faded-primary rounded-3 mx-5 mx-md-3 p-3 mt-4">
-            <div class="col">
-                <h3 class="text-center">Important Dates</h3>
-                <div class="container">
-                    <div class="row justify-content-evenly row-cols-md-3 text-white">
-                        <div class="col-md-4 col-lg-3 p-2">
-                            <div class="bg-info rounded-3 p-3 text-center h-100">
-                                <div class="border-bottom border-white border-2 pb-2 fs-lg fw-bold">May 20, 2022</div>
-                                <div class="fs-xl pt-3">Camera-ready Version Upload</div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-3 p-2">
-                            <div class="bg-info rounded-3 p-3 text-center h-100">
-                                <div class="border-bottom border-white border-2 pb-2 fs-lg fw-bold">Jun 19, 2022</div>
-                                <div class="fs-xl pt-3">Registration Deadline</div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-3 p-2">
-                            <div class="bg-info rounded-3 p-3 text-center h-100">
-                                <div class="border-bottom border-white border-2 pb-2 fs-lg fw-bold">Jun 19, 2022</div>
-                                <div class="fs-xl pt-3">Welcome Reception</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-center my-3"><a href="#schedule" data-scroll><i class="bx bx-chevron-right"></i>See full conference schedule</a></p>
-            </div>
-        </div>
+        <!-- todo: bring back in important dates? -->
+
 
         <div class="row mt-4 mt-xl-5">
             <div class="accordion m-auto" id="accordionDefault" style="max-width: 950px;">
@@ -294,433 +217,38 @@
         </div>
     </section>
 
-
     <!-- Schedule -->
     <section class="container py-5" id="schedule">
         <div class="row mt-xl-2 mb-xl-3 pb-3 py-md-4 py-lg-5">
             <div class="col-12">
                 <h2 class="h1 text-center text-sm-start pb-2 pb-lg-0 mb-4 mb-lg-5">Schedule</h2>
             </div>
-            <div class="col-lg-3 mb-4">
-
-                <!-- Nav tabs -->
-                <div class="nav flex-nowrap flex-lg-column nav-tabs" role="tablist" aria-orientation="vertical">
-                    <a href="#day-1" class="nav-link d-block w-100 rounded-3 p-3 p-xl-4 me-2 me-sm-3 me-lg-0 mb-lg-3 active" id="day-1-tab" data-bs-toggle="tab" role="tab" aria-controls="day-1" aria-selected="true">
-                        <div class="fs-4 fw-bold">Jun 19, 2022</div>
-                    </a>
-                    <a href="#day-2" class="nav-link d-block w-100 rounded-3 p-3 p-xl-4 mb-lg-3" id="day-2-tab" data-bs-toggle="tab" role="tab" aria-controls="day-2" aria-selected="false">
-                        <div class="fs-4 fw-bold">Jun 20, 2022</div>
-                    </a>
-                    <a href="#day-3" class="nav-link d-block w-100 rounded-3 p-3 p-xl-4 mb-lg-3" id="day-3-tab" data-bs-toggle="tab" role="tab" aria-controls="day-3" aria-selected="false">
-                        <div class="fs-4 fw-bold">Jun 21, 2022</div>
-                    </a>
-                    <a href="#day-4" class="nav-link d-block w-100 rounded-3 p-3 p-xl-4 mb-lg-3" id="day-4-tab" data-bs-toggle="tab" role="tab" aria-controls="day-4" aria-selected="false">
-                        <div class="fs-4 fw-bold">Jun 22, 2022</div>
-                    </a>
-                    <a href="#day-5" class="nav-link d-block w-100 rounded-3 p-3 p-xl-4 mb-lg-3" id="day-5-tab" data-bs-toggle="tab" role="tab" aria-controls="day-5" aria-selected="false">
-                        <div class="fs-4 fw-bold">Jun 23, 2022</div>
-                    </a>
+                
+            <div class="col-xl-6 mb-6 mb-xl-0 text-center">
+              <div class="card text-center">
+                <div class="card-body">
+                  <h5 class="card-title">Overview Conference Schedule</h5>
+                  <p class="card-text fs-sm">The overview full conference schedule in PDF file format.</p>
+                  <a class="btn btn-sm btn-primary" href="{{'./upcoming-conference/ICRAT_2022_Schedule.pdf'}}">Schedule (PDF)</a>
                 </div>
+              </div>
             </div>
-            <div class="col-lg-8 offset-lg-1">
 
-                <!-- Tab panes -->
-                <div class="tab-content">
+            <div class="col-xl-6 mb-6 mb-xl-0 text-center">
+              <div class="card text-center">
+                <div class="card-body">
+                  <h5 class="card-title">Full Conference Schedule</h5>
+                  <p class="card-text fs-sm">The full schedule, condensed schedule, session chair assignments, and paper track information.</p>
 
-                    <!-- Day 1 schedule -->
-                    <div class="tab-pane fade show active" id="day-1" role="tabpanel" aria-labelledby="day-1-tab">
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">From 6:00 pm</div>
-                                    <p class="text-muted mb-0">Jun 19th</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="mb-0">Welcome Reception</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Day 2 schedule -->
-                    <div class="tab-pane fade" id="day-2" role="tabpanel" aria-labelledby="day-2-tab">
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">8:30 – 10:00 am</div>
-                                    <p class="text-muted mb-0">June 20th</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5>Opening Ceremony</h5>
-                                    <p class="mb-4">Nec, malesuada quisque lorem id amet posuere. Risus, elit, vel pharetra ac, dictum lorem nisl morbi. Lorem dui id aliquam eu feugiat arcu diam.</p>
-                                    <div class="row row-cols-1 row-cols-md-2 g-3">
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="{{'/static/assets/img/avatar/01.jpg' | url}}" class="rounded-circle" width="48" alt="Jerome Bell">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Jerome Bell</h6>
-                                                    <p class="fs-sm text-muted mb-0">Strategic Advisor, Shopify</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="{{'/static/assets/img/avatar/06.jpg' | url}}" class="rounded-circle" width="48" alt="Jenny Wilson">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Jenny Wilson</h6>
-                                                    <p class="fs-sm text-muted mb-0">UX Designer, Glassdoor</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="text-muted h5 mb-1">10:00 – 10:30 am</div>
-                                    <p class="text-muted mb-0">June 20th</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="text-muted mb-0">Coffee Break</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">10:00 – 11:30 am</div>
-                                    <p class="text-muted mb-0">June 20th</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="mb-0">Technical Sessions</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="text-muted h5 mb-1">11:30 am – 01:00 am</div>
-                                    <p class="text-muted mb-0">June 20th</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="text-muted mb-0">Lunch Break</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">1:00 – 2:30 pm</div>
-                                    <p class="text-muted mb-0">June 20th</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="mb-0">Technical Sessions</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="text-muted h5 mb-1">2:30 – 03:00 pm</div>
-                                    <p class="text-muted mb-0">June 20th</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="text-muted mb-0">Lunch Break</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">3:00 – 4:30 pm</div>
-                                    <p class="text-muted mb-0">June 20th</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="mb-0">Technical Sessions</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Day 3 schedule -->
-                    <div class="tab-pane fade" id="day-3" role="tabpanel" aria-labelledby="day-3-tab">
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">8:30 – 10:00 am</div>
-                                    <p class="text-muted mb-0">June 21st</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5>Plenary Session</h5>
-                                    <p class="mb-4">Nec, malesuada quisque lorem id amet posuere. Risus, elit, vel pharetra ac, dictum lorem nisl morbi. Lorem dui id aliquam eu feugiat arcu diam.</p>
-                                    <div class="row row-cols-1 row-cols-md-2 g-3">
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/img/avatar/01.jpg" class="rounded-circle" width="48" alt="Jerome Bell">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Jerome Bell</h6>
-                                                    <p class="fs-sm text-muted mb-0">Strategic Advisor, Shopify</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/img/avatar/06.jpg" class="rounded-circle" width="48" alt="Jenny Wilson">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Jenny Wilson</h6>
-                                                    <p class="fs-sm text-muted mb-0">UX Designer, Glassdoor</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="text-muted h5 mb-1">10:00 – 10:30 am</div>
-                                    <p class="text-muted mb-0">June 21st</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="text-muted mb-0">Coffee Break</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">10:00 – 11:30 am</div>
-                                    <p class="text-muted mb-0">June 21st</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="mb-0">Technical Sessions</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="text-muted h5 mb-1">11:30 am – 01:00 am</div>
-                                    <p class="text-muted mb-0">June 21st</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="text-muted mb-0">Lunch Break</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">1:00 – 4:30 pm</div>
-                                    <p class="text-muted mb-0">June 21st</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="mb-0">Student Activity</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Day 4 schedule -->
-                    <div class="tab-pane fade" id="day-4" role="tabpanel" aria-labelledby="day-4-tab">
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">8:30 – 10:00 am</div>
-                                    <p class="text-muted mb-0">June 22nd</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5>Plenary Session</h5>
-                                    <p class="mb-4">Nec, malesuada quisque lorem id amet posuere. Risus, elit, vel pharetra ac, dictum lorem nisl morbi. Lorem dui id aliquam eu feugiat arcu diam.</p>
-                                    <div class="row row-cols-1 row-cols-md-2 g-3">
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="{{'/static/assets/img/avatar/01.jpg' | url}}" class="rounded-circle" width="48" alt="Jerome Bell">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Jerome Bell</h6>
-                                                    <p class="fs-sm text-muted mb-0">Strategic Advisor, Shopify</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="{{'/static/assets/img/avatar/06.jpg' | url}}" class="rounded-circle" width="48" alt="Jenny Wilson">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Jenny Wilson</h6>
-                                                    <p class="fs-sm text-muted mb-0">UX Designer, Glassdoor</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="text-muted h5 mb-1">10:00 – 10:30 am</div>
-                                    <p class="text-muted mb-0">June 22nd</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="text-muted mb-0">Coffee Break</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">10:00 – 11:30 am</div>
-                                    <p class="text-muted mb-0">June 22nd</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="mb-0">Technical Sessions</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="text-muted h5 mb-1">11:30 am – 01:00 am</div>
-                                    <p class="text-muted mb-0">June 22nd</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="text-muted mb-0">Lunch Break</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">1:00 – 2:30 pm</div>
-                                    <p class="text-muted mb-0">June 22nd</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="mb-0">Technical Sessions</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="text-muted h5 mb-1">2:30 – 03:00 pm</div>
-                                    <p class="text-muted mb-0">June 22nd</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="text-muted mb-0">Lunch Break</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">3:00 – 4:30 pm</div>
-                                    <p class="text-muted mb-0">June 22nd</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="mb-0">Technical Sessions</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">From 8:00 pm</div>
-                                    <p class="text-muted mb-0">June 22nd</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="mb-0">Gala Dinner</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Day 5 schedule -->
-                    <div class="tab-pane fade" id="day-5" role="tabpanel" aria-labelledby="day-5-tab">
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">8:30 – 10:00 am</div>
-                                    <p class="text-muted mb-0">June 23rd</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5>Plenary Session</h5>
-                                    <p class="mb-4">Nec, malesuada quisque lorem id amet posuere. Risus, elit, vel pharetra ac, dictum lorem nisl morbi. Lorem dui id aliquam eu feugiat arcu diam.</p>
-                                    <div class="row row-cols-1 row-cols-md-2 g-3">
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/img/avatar/01.jpg" class="rounded-circle" width="48" alt="Jerome Bell">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Jerome Bell</h6>
-                                                    <p class="fs-sm text-muted mb-0">Strategic Advisor, Shopify</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/img/avatar/06.jpg" class="rounded-circle" width="48" alt="Jenny Wilson">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Jenny Wilson</h6>
-                                                    <p class="fs-sm text-muted mb-0">UX Designer, Glassdoor</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="text-muted h5 mb-1">10:00 – 10:30 am</div>
-                                    <p class="text-muted mb-0">June 23rd</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5 class="text-muted mb-0">Coffee Break</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-bottom pb-4">
-                            <div class="row pb-1 pb-xl-3">
-                                <div class="col-sm-4 mb-3 mb-sm-0">
-                                    <div class="h5 mb-1">10:00 – 11:30 am</div>
-                                    <p class="text-muted mb-0">June 23rd</p>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h5>Closing Session</h5>
-                                    <p class="mb-4">Nec, malesuada quisque lorem id amet posuere. Risus, elit, vel pharetra ac, dictum lorem nisl morbi. Lorem dui id aliquam eu feugiat arcu diam.</p>
-                                    <div class="row row-cols-1 row-cols-md-2 g-3">
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/img/avatar/01.jpg" class="rounded-circle" width="48" alt="Jerome Bell">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Jerome Bell</h6>
-                                                    <p class="fs-sm text-muted mb-0">Strategic Advisor, Shopify</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="assets/img/avatar/06.jpg" class="rounded-circle" width="48" alt="Jenny Wilson">
-                                                <div class="ps-3">
-                                                    <h6 class="fw-semibold mb-1">Jenny Wilson</h6>
-                                                    <p class="fs-sm text-muted mb-0">UX Designer, Glassdoor</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                  <a class="btn btn-sm btn-primary" href="{{'./upcoming-conference/ICRAT_2022_Schedule.xlsx'}}">Schedule (XLSX)</a>
                 </div>
+              </div>
             </div>
+                
         </div>
     </section>
 
+    <!-- include calendar schedule later see schedule.html in templates -->
 
     <!-- Testimonials slider -->
     <section class="bg-secondary py-5" id="committee">
@@ -793,9 +321,9 @@
                     <div class="card border-0 bg-transparent">
                         <!--img src="{{'/static/assets/img/team/29.jpg' | url}}" class="rounded-3" alt="Damian Rivas"-->
                         <div class="card-body text-center p-3">
-                            <h3 class="fs-lg fw-semibold pt-1 mb-1">Damian Rivas</h3>
+                            <h3 class="fs-lg fw-semibold pt-1 mb-1">Michael Schultz</h3>
                             <h4 class="fs-6 fw-lighter mb-1">Tutorial Chair</h4>
-                            <p class="fs-sm mb-0">Universidad de Sevilla</p>
+                            <p class="fs-sm mb-0">Universität der Bundeswehr München</p>
                         </div>
                     </div>
                 </div>
@@ -882,8 +410,8 @@
                 <h3 class="h4">Venue</h3>
                 <h2 class="h1 mb-4">University of South Florida</h2>
                 <div class="d-block">
-                    <a href="hotel.html" class="btn btn-primary mb-2">Hotel Information</a>
-                    <a href="area.html" class="btn btn-primary mb-2">Tampa Area Information</a>
+                    <a href="{{'./upcoming-conference/hotel/' | url }}" class="btn btn-primary mb-2">Hotel Information</a>
+                    <a href="{{'./upcoming-conference/local-attractions/' | url }}" class="btn btn-primary mb-2">Tampa Area Information</a>
                 </div>
             </div>
             <div class="col-xl-9 col-md-8">

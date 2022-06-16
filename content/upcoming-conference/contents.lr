@@ -1,10 +1,8 @@
-title: The 10th International Conference
+title: 10th International Conference
 ---
-body: 
+body:
 
-<div style="max-width:75%" class="center-block">
-<img src="./USF-COE.jpg" class="img-responsive"/>
-</div>
+<img src="./USF-COE.jpg" class="img-responsive rounded-3" width="100%"/>
 
 <br/>
 
