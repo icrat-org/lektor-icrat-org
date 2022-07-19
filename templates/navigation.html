@@ -15,22 +15,39 @@
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="{{'/upcoming-conference' | url}}" class="nav-link">Upcoming Conference <br/>ICRAT 2024</a>
+                    </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">Upcoming Conference</a>
-                        {% set upcoming_conference_children = site.get('/upcoming-conference/').children %}
+                        {% set highlight_url = '/previous-conferences/10th-internation-conference' %}
+                        {% set highlight_conference_children = site.get(highlight_url).children %}
                         <ul class="dropdown-menu">
-                            <li><a  class="dropdown-item" href="{{'/upcoming-conference/'|url}}">All Upcoming Conference Information</a></li>
-                            {% for upcoming_child in upcoming_conference_children %}
-                            <li><a  class="dropdown-item" href="{{ upcoming_child | url }}">{{upcoming_child.title}}</a></li>
+                            <li><a  class="dropdown-item" href="{{highlight_url|url}}">{{ highlight_title }}</a></li>
+                            {% for highlight_child in highlight_conference_children %}
+                            <li><a  class="dropdown-item" href="{{ highlight_child | url }}">{{highlight_child.title}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        {% set highlight_title = 'Latest Conference ICRAT 2022' %}
+                        {% set highlight_url = '/previous-conferences/10th-international-conference/' %}
+                        <a href="{{highlight_url | url}}" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">{{ highlight_title }}</a>
+                        {% set highlight_conference_children = site.get(highlight_url).children %}
+                        <ul class="dropdown-menu">
+                            <li><a  class="dropdown-item" href="{{highlight_url|url}}">All {{ highlight_title }} Information</a></li>
+                            {% for highlight_child in highlight_conference_children %}
+                            <li><a  class="dropdown-item" href="{{ highlight_child | url }}">{{highlight_child.title}}</a></li>
                             {% endfor %}
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a href="{{'/#about'|url}}" class="nav-link" data-scroll>About</a>
                     </li>
-                    <li class="nav-item">
+                    {#
+                    <!--li class="nav-item">
                         <a href="{{'/#schedule'|url}}" class="nav-link" data-scroll>Schedule</a>
-                    </li>
+                    </li-->
+                    #}
                     <li class="nav-item">
                         <a href="{{'/#committee'|url}}" class="nav-link" data-scroll>Committee</a>
                     </li>
@@ -59,9 +76,11 @@
         <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="{{'/upcoming-conference/registration/' | url }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+        {#
+        <!--a href="{{'/upcoming-conference/registration/' | url }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
             Registration
-        </a>
+        </a-->
+        #}
     </div>
 </header>
 
