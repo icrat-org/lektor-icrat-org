@@ -17,6 +17,6 @@ Submissions by researchers are solicited on a wide range of topics describing th
 ---
 _model: homepage
 ---
-_template: layout-home-registration.html
+_template: layout-home.html
 ---
 breadcrumb_name: ICRAT
