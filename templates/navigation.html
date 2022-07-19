@@ -1,91 +1,86 @@
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{'/'|url}}" style="font-size: 14px!important;">Home</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-               
-                <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Upcoming Conference <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
 
-                    <li>
-                    <a href="{{ '/upcoming-conference'|url }}">Conference Information</a>
-                    </li>
 
-                    <li>
-                    <a href="{{ '/upcoming-conference/registration/'|url }}">Registration</a>
+<!-- Navbar -->
+<header class="header navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container px-3">
+        <a href="{{'/' | url }}" class="navbar-brand pe-3">
+            <img src="{{'/static/img/header-globe.png' | url}}" width="47" alt="ICRAT">
+            ICRAT
+        </a>
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="{{'/upcoming-conference' | url}}" class="nav-link">Upcoming Conference <br/>ICRAT 2024</a>
                     </li>
-
-                    <li>
-                    <a href="{{ '/upcoming-conference/hotel/'|url }}">Hotel Information</a>
+                    <li class="nav-item dropdown">
+                        {% set highlight_url = '/previous-conferences/10th-internation-conference' %}
+                        {% set highlight_conference_children = site.get(highlight_url).children %}
+                        <ul class="dropdown-menu">
+                            <li><a  class="dropdown-item" href="{{highlight_url|url}}">{{ highlight_title }}</a></li>
+                            {% for highlight_child in highlight_conference_children %}
+                            <li><a  class="dropdown-item" href="{{ highlight_child | url }}">{{highlight_child.title}}</a></li>
+                            {% endfor %}
+                        </ul>
                     </li>
-
-                    <li>
-                    <a href="{{ '/upcoming-conference/local-attractions/'|url }}">Tampa Area Local Attractions</a>
+                    <li class="nav-item dropdown">
+                        {% set highlight_title = 'Latest Conference ICRAT 2022' %}
+                        {% set highlight_url = '/previous-conferences/10th-international-conference/' %}
+                        <a href="{{highlight_url | url}}" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">{{ highlight_title }}</a>
+                        {% set highlight_conference_children = site.get(highlight_url).children %}
+                        <ul class="dropdown-menu">
+                            <li><a  class="dropdown-item" href="{{highlight_url|url}}">All {{ highlight_title }} Information</a></li>
+                            {% for highlight_child in highlight_conference_children %}
+                            <li><a  class="dropdown-item" href="{{ highlight_child | url }}">{{highlight_child.title}}</a></li>
+                            {% endfor %}
+                        </ul>
                     </li>
-
-                    <li>
-                    <a href="{{ '/upcoming-conference/sponsorship'|url }}">Sponsorship Opportunities</a>
+                    <li class="nav-item">
+                        <a href="{{'/#about'|url}}" class="nav-link" data-scroll>About</a>
                     </li>
-
-                    <li>
-                    <a href="{{ '/upcoming-conference/committee-members' | url }}"> Conference Committee</a>
-                    </li>
-
-                    <li>
-                    <a href="{{ '/upcoming-conference/call-for-papers'|url }}">Call for Papers</a>
-                    </li>
-                    
-                    <li>
-                    <a href="{{ '/upcoming-conference/call-for-papers/ICRAT2022_Call_for_Papers.pdf'|url }}">Call for Papers (PDF)</a>
-                    </li>
-                    <li>
-                    <a href="{{ '/upcoming-conference/call-for-papers/ICRAT2022_regular_paper_template.docx'|url }}"/>Regular Paper Template (updated 8-Feb-2022)</a>
-                    </li>
-                    
-                    <li>
-                    <a href="{{ '/upcoming-conference/call-for-papers/ICRAT2022_doctoral_symposium_template.docx'|url }}">Doctorial Symposium Template (updated 27-Jan-2022)</a>
-                    </li>
-
-                    <!--li>
-                    <a href="{{ '/upcoming-conference/papers/Abstracts_ICRAT2020.pdf' | url }}">2020 ICRAT Book of Abstracts</a>
-                    </li>
-
-                    <li>
-                    <a href="{{ '/upcoming-conference/papers'|url }}">2020 Presentations and Technical Papers</a>
-                    </li>
-                    
-                    <li>
-                    <a href="https://easychair.org/conferences/?conf=icrat2020">EasyChair Paper Submissions</a>
+                    {#
+                    <!--li class="nav-item">
+                        <a href="{{'/#schedule'|url}}" class="nav-link" data-scroll>Schedule</a>
                     </li-->
-                    
-                           
-                    </ul>
-                </li>
+                    #}
+                    <li class="nav-item">
+                        <a href="{{'/#committee'|url}}" class="nav-link" data-scroll>Committee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{'/#venue'|url}}" class="nav-link" data-scroll>Venue</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Previous Conferences</a>
 
-                <!--li>
-                <a href="{{'/upcoming-conference'|url}}">Upcoming Conference</a>
-                </li-->
-
-
-                <li>
-                <a href="{{'/previous-conferences'|url}}">Previous Conferences</a>
-                </li>
-               
-            </ul>
+                        <ul class="dropdown-menu">
+                        {% set previous_conferences = site.get('/previous-conferences/') %}
+                        {% for child in previous_conferences.children | sort(attribute='start_date', reverse=True) %}
+                        <li>
+                            <a href="{{ child | url}}" class="dropdown-item">ICRAT {{child.start_date.year}} - {{ child.title[:child.title.find(' ')] }} International Conference</a>
+                         </li>
+                        {% endfor %}
+                        <li><span class="dropdown-item disabled">ICRAT 2004 - 1st International Conference</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="offcanvas-footer border-top">
+                <a href="{{'/upcoming-conference/registration/' | url}}" class="btn btn-primary w-100">Registration</a>
+            </div>
         </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        {#
+        <!--a href="{{'/upcoming-conference/registration/' | url }}" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+            Registration
+        </a-->
+        #}
+    </div>
+</header>
+

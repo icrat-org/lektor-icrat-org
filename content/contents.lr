@@ -1,42 +1,22 @@
-title: Welcome to the ICRAT website
+title: International Conference on Research in Air Transportation
 ---
-addhead:
-
-<style>
-#bodycontent p, td {
- font-size: 18px;
-}
-
-
-#bodycontent td {
- font-size: 16px;
-}
-</style>
+subtitle: Established event for the air transportation research community
 ---
-body: 
+next_location: Singapore
+---
+next_date: June 2024
+---
+body:
 
+ICRAT is an established event in Air Transportation Research with a global outreach, alternating yearly with the USA/Europe Air Traffic Management (ATM) Research and Development (R&D) Seminar. ICRAT is a forum particularly encouraging young researchers (and their mentors) within air transportation to share their work, expand their professional network, practice scientific dissemination, gain new inspiration, and discover the new challenges confronting society and the market to adopt mobility in a time of critical ecological debate.
 
-ICRAT 2022 is planned to be held June 19-23, 2022 at the University of South Florida in Tampa, Florida.
+Papers should clearly state the objectives, approach, methodology and results of the research, and should draw conclusions that demonstrate the interest of the work.
 
-<div style="font-size: 20px;" class="alert alert-secondary" role="alert">
-<a class="alert-link" href="./upcoming-conference/">ICRAT 2022 Schedule now available! &raquo;</a> <br/>
-<a class="alert-link" href="./upcoming-conference/">ICRAT 2022 Book of Abstracts (PDF) now available! &raquo;</a> <br/>
-<a class="alert-link" href="./upcoming-conference/registration/">Now accepting payments for registration! &raquo;</a> <br/>
-<a class="alert-link" href="./upcoming-conference/sponsorship/">Sponsorship opportunities now available! &raquo;</a> 
-</div>
-
-<img src="./upcoming-conference/USF-COE.jpg" class="img-responsive center-block"/>
-
-## ICRAT Conference Background
-                      
-                        
-Following the success of its nine previous editions, ICRAT has now been established as a mainstream biennial event in Air Transport Research, alternating with the USA/Europe Air Traffic Management (ATM) Research and Development (R&D) Seminar. ICRAT is an excellent forum for young researchers within air transportation to share their work, expand their professional network, and gain new knowledge and inspiration.
-
-ICRAT 2020, the nineth edition, was held virtually only, and included tutorials, presentations, and a forum for PhD students. These students were able to present their research problems and get advice from established scientists in the field during a doctoral symposium. In addition, there were world class keynote speakers, senior researchers that virtually sat on several panels that were able to provide constructive feedback on the papers presented during the conference.  Planned with full in-person participation for 2022, tutorials will additionally be offered to PhD students to learn from experts about useful scientific techniques and ATM related use cases.
-
-The ICRAT has resulted in an archive of approximately 750 peer-reviewed papers and presentations, available through this web site, represents one of the most valuable and widely-used records of air traffic management research available.
-
-Air Traffic Management (ATM) is defined in the ICAO ATM Global Concept document as "the dynamic, integrated management of air traffic and airspace - safely, economically, and efficiently - through the provision of facilities and seamless services in collaboration with all parties". ATM therefore encompasses airspace organization and management, flow and capacity management and en-route, terminal and airport air traffic control.
+Submissions by researchers are solicited on a wide range of topics describing theoretical results and innovative applications in air transportation including but not limited to the following conference topics:
 
 ---
-_template: homepage-layout.html
+_model: homepage
+---
+_template: layout-home-registration.html
+---
+breadcrumb_name: ICRAT

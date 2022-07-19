@@ -2,6 +2,7 @@ seminarContent/
 packages/
 build/
 temp/
+redesign/node_modules/
 *.pyc
 *.swp
 .~lock*
