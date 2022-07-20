@@ -19,19 +19,9 @@
                         <a href="{{'/upcoming-conference' | url}}" class="nav-link">Upcoming Conference <br/>ICRAT 2024</a>
                     </li>
                     <li class="nav-item dropdown">
-                        {% set highlight_url = '/previous-conferences/10th-internation-conference' %}
-                        {% set highlight_conference_children = site.get(highlight_url).children %}
-                        <ul class="dropdown-menu">
-                            <li><a  class="dropdown-item" href="{{highlight_url|url}}">{{ highlight_title }}</a></li>
-                            {% for highlight_child in highlight_conference_children %}
-                            <li><a  class="dropdown-item" href="{{ highlight_child | url }}">{{highlight_child.title}}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
                         {% set highlight_title = 'Latest Conference ICRAT 2022' %}
                         {% set highlight_url = '/previous-conferences/10th-international-conference/' %}
-                        <a href="{{highlight_url | url}}" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">{{ highlight_title }}</a>
+                        <a href="#" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">{{ highlight_title }}</a>
                         {% set highlight_conference_children = site.get(highlight_url).children %}
                         <ul class="dropdown-menu">
                             <li><a  class="dropdown-item" href="{{highlight_url|url}}">All {{ highlight_title }} Information</a></li>
@@ -69,9 +59,11 @@
                     </li>
                 </ul>
             </div>
-            <div class="offcanvas-footer border-top">
+            {#
+            <!--div class="offcanvas-footer border-top">
                 <a href="{{'/upcoming-conference/registration/' | url}}" class="btn btn-primary w-100">Registration</a>
-            </div>
+            </div-->
+            #}
         </div>
         <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
