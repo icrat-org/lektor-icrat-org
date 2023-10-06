@@ -1,7 +1,32 @@
 
 <!-- Sponsors -->
+{% if conference_year is not defined %}
+    {% set conference_year = 'XXXX' %}
+    {% set sponsors = [] %}
+{% endif %}
+
+{% set spon_vars = {'conf_year': conference_year, 'p': this} %}
+{% for i in range(10) %}
+  {% if spon_vars.p is none %}
+    {% break %}
+  {% endif %}
+
+  {% if spon_vars.p.start_date %}
+    {% if spon_vars.update({'conf_year': spon_vars.p.start_date.year|string}) %}{%endif%}
+    {% break %}
+  {% endif %}
+
+  {% if spon_vars.update({'p': spon_vars.p.parent}) %}{%endif%}
+{% endfor %}
+
+{% set conference_year = spon_vars.conf_year %}
+
+{% if conference_year != '' %}
+{% set sponsors = sponsors_csv(year=conference_year) %}
+{% endif %}
+
 <div class="container pt-1 pt-md-2 pb-lg-2 pt-lg-4">
-    <h2 class="h3 text-light text-center text-lg-start mb-4 mb-lg-5">ICRAT 2022 Sponsors:</h2>
+    <h2 class="h3 text-light text-center text-lg-start mb-4 mb-lg-5">ICRAT {% if conference_year != 'XXXX' %} {{ conference_year }} {% endif %} Sponsors:</h2>
     <div class="swiper ms-xxl-n5 me-xxl-n4" data-swiper-options='{
     "slidesPerView": 2,
     "spaceBetween": 24,
@@ -24,7 +49,7 @@
       }
     }
   }'>
-        {% set sponsors = sponsors_csv(year='2022') %}
+
         <div class="swiper-wrapper align-items-center">
 
             <!-- Item -->

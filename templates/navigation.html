@@ -15,12 +15,12 @@
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    <!--li class="nav-item">
                         <a href="{{'/upcoming-conference' | url}}" class="nav-link">Upcoming Conference <br/>ICRAT 2024</a>
-                    </li>
+                    </li-->
                     <li class="nav-item dropdown">
-                        {% set highlight_title = 'Latest Conference ICRAT 2022' %}
-                        {% set highlight_url = '/previous-conferences/10th-international-conference/' %}
+                        {% set highlight_title = 'ICRAT 2024' %}
+                        {% set highlight_url = '/upcoming-conference/' %}
                         <a href="#" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">{{ highlight_title }}</a>
                         {% set highlight_conference_children = site.get(highlight_url).children %}
                         <ul class="dropdown-menu">
