@@ -9,6 +9,11 @@ body:
   <strong>Correction.</strong>  A previous version of the call for papers listed on this site had a date of the conference as June 1-4, 2024. This was incorrect.  The date of the conference is July 1-4, 2024.  We apologize for the error.
 </div>
 
+<!-- Info alert -->
+<div class="alert alert-info" role="alert">
+  <strong>Update!</strong> New LaTeX templates provided for paper submission.  See files below.
+</div>
+
 ** [Call for papers PDF can be found at this link.](./ICRAT_2024_Call_for_Papers_Final.pdf) **
 
 
@@ -48,7 +53,10 @@ Papers should clearly state the objectives, approach, methodology and results of
 
 Authors are invited to submit (online) their full papers (with a strict maximum of 8 pages), written in English, presenting the results of research, or of innovative practical applications relevant to the conference topics.  
 
-The [**technical paper template is available here **](./ICRAT2024_regular_paper_template.docx). Papers must be submitted by Sunday February 11, 2024. If your paper is approved by the Program Committee, you will receive the notification of acceptance by early April 2024.
+The [**technical paper template as a Word document is available here **](./ICRAT2024_regular_paper_template.docx). A [**LaTeX zip file version of the paper template available here **](./ICRAT_2024_Latex_template.zip).  An [example of a rendered LaTeX PDF is available here.](./ICRAT_2024_Latex_template.pdf)
+
+Papers must be submitted by Sunday February 11, 2024. If your paper is approved by the Program Committee, you will receive the notification of acceptance by early April 2024.
+
 
 Authors must [**register and log in to the conference paper submission page at the link provided here**](https://easychair.org/conferences/?conf=icrat2024) in order to submit their paper.
 
@@ -67,7 +75,7 @@ Ph.D. students interested in the ICRAT 2024 Doctoral Symposium are invited to su
 doctorial papers (up to 4 pages) written in English, presenting the research, approach and early
 results.
 
-The [**Doctorial Symposium template is available here **](./ICRAT2024_doctoral_symposium_template.docx). Papers must be submitted by Sunday February 11, 2024.
+The [**Doctorial Symposium template is available here as a Word document**](./ICRAT2024_doctoral_symposium_template.docx). Papers must be submitted by Sunday February 11, 2024.
 
 Authors must [**register and log in to the conference paper submission page at the link provided here. **](https://easychair.org/conferences/?conf=icrat2024) in order to submit their paper.
 
